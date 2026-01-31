@@ -1,234 +1,475 @@
-// JS. ДЗ 2
+// JS. ДЗ 3
 // Коди з лекцій та коди з ДЗ
 //
 // https://github.com/OktenSchool/javascript.git
 //
+//     #y7crMeFwHcS
 //
+// – За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
 //
-//     ДЗ:
-//
-//
-//
-//         #67kfznmiMl
-//
-// – Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
-//
-// let arr = [true, 24, 'string', {age:24}, 'Misha', -87, {name: 'Vika'}, 'Okten', false, 68];
-// console.log(arr[0]);
-// console.log(arr[1]);
-// console.log(arr[2]);
-// console.log(arr[3]);
-// console.log(arr[4]);
-// console.log(arr[5]);
-// console.log(arr[6]);
-// console.log(arr[7]);
-// console.log(arr[8]);
-// console.log(arr[9]);
-//
-//
-// #LARqoUj5I
-//
-// – Створити 3 об’єкти які описують книги. Поля об’єкту : title ,pageCount, genre.
-//
-// let arr1 = {title: 'Vikking', pageCount: 658, genre: 'novel'};
-// let arr2 = {title: 'Economic', pageCount: 345, genre: 'busines'};
-// let arr3 = {title: 'Kobzar', pageCount: 485, genre: 'poems'};
-//
-// console.log(arr1);
-// console.log(arr2);
-// console.log(arr3);
-//
-//     #sA3Gg1sCp
-//
-// – Створити 3 об’єкти, які описують книги. Поля об’єкту : title ,pageCount, genre, authors. Поле “автори” – являється  масивом. Кожен автор має поля name та age.
-//
-// let arr1 = {title: 'Vikking', pageCount: 658, genre: 'novel', authors: {name:'Jon Row', age: 54}};
-// let arr2 = {title: 'Economic', pageCount: 345, genre: 'busines', authors: {name:'Robert Kiosaki', age: 62}};
-// let arr3 = {title: 'Kobzar', pageCount: 485, genre: 'poems', authors: {name:'Taras Shewchenko', age: 48}};
-//
-// console.log(arr1);
-// console.log(arr2);
-// console.log(arr3);
-//
-//     #jCHFnEbdmFd
-//
-// – Створити масив з 10 об’єктами, які описують сутніть “користувач”. Поля: name, username,password. Вивести в консоль пароль кожного користувача
-//
-// const users = [
-//     {name: 'Vika', username: 'Trach', password: '123456'},
-//     {name: 'Misha', username: 'Maietskyi', password: '234567'},
-//     {name: 'Roman', username: 'Maietskyi', password: '345678'},
-//     {name: 'Andrij', username: 'Trach', password: '456789'},
-//     {name: 'Daria', username: 'Krupka', password: '567891'},
-//     {name: 'Maria', username: 'Krupka', password: '678912'},
-//     {name: 'Anna', username: 'Petrivska', password: '789123'},
-//     {name: 'Vasul', username: 'Krupka', password: '891234'},
-//     {name: 'Vika', username: 'Trach', password: '912345'},
-//     {name: 'Misha', username: 'Maietskyi', password: '123456'},
-// ]
-// console.log(users[0]);
-// console.log(users[1]);
-// console.log(users[2]);
-// console.log(users[3]);
-// console.log(users[4]);
-// console.log(users[5]);
-// console.log(users[6]);
-// console.log(users[7]);
-// console.log(users[8]);
-// console.log(users[9]);
-//
-// #coYydZuaeEB
-//
-// – описати масив, в якому буде зберігатись інформація про температуру вранці, вдень і ввечері за термін в 7 днів. Як зробити цей масив – вам потрібно подумати. Нормальних варіантів опису – 2. Варіант, коли в вас буде одновимірний масив з 21 значенням виключаємо одразу
-//
-// let arr = [
-//     [18, 32, 25],
-//     [15, 30, 24],
-//     [16, 28, 22],
-//     [17, 30, 24],
-//     [18, 26, 26],
-//     [17, 29, 25],
-//     [16, 31, 28]
-// ]
-// let arr = [
-//         {day: 1, temperature:[18, 32, 25]},
-//         {day: 2, temperature:[15, 30, 24]},
-//         {day: 3, temperature:[16, 28, 22]},
-//         {day: 4, temperature:[17, 30, 24]},
-//         {day: 5, temperature:[18, 26, 26]},
-//         {day: 6, temperature:[17, 29, 25]},
-//         {day: 7, temperature:[16, 31, 28]},
-// ]
-//
-// #bAUsaq6LI
-//
-// – Є змінна х, якій ви надаєте довільне числове значення.
-//
-//     Якщо змінна x не дорівнює нулю, виведіть ‘Вірно’, інакше виведіть ‘Невірно’. Перевірте  скрипт при a, що дорівнює 1, 0, -3
-//
-// let x = +prompt('Number');
-//
-// if (x !== 0){
-//     console.log('Cool');
-// } else {console.log('Eror')}
-//
-// #3ckURgvs
-//
-// – Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
-//
-// (в першу, другу, третю або четверту частину години).
-//
-// let time = +prompt("Введіть від 0 до 59?");
-//
-// if (time >= 0 && time <= 14) {
-//     console.log('1 чверть')
-// } else if (time >= 15 && time <= 29) {
-//     console.log('2 чверть')
-// } else if (time >= 30 && time <= 44) {
-//     console.log('3 чверть')
-// } else if (time >= 45 && time <= 59) {
-//     console.log('4 чверть')
-// } else {
-//     console.log('Введіть від 0 до 59')
+// for (let i = 0; i < 10; i++) {
+//     document.write(`<div>${+i}</div>`);
 // }
 //
-// #UMoNq4biWGe
+// #TYj7ncx
 //
-// – У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину (декаду) місяця потрапляє це число (у першу, другу чи третю).
+// – За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 //
-// let day = +prompt("Wot day?");
-//
-// if (day > 0 && day <= 10) {
-//     console.log('перша декада місяця')
-// } else if (day >= 11 && day <= 20) {
-//     console.log('Друга декада місяця')
-// } else if (day >= 21 && day <= 31) {
-//     console.log('Третя декада місяця')
-// } else {console.log('В місяці немає стільки днів')}
-//
-// #KzrtqyQ
-//
-// – Скласти розклад на тиждень за домопогою switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа, що заплановано на цей день (можна замість плану на день, назву дня англійською).
-//
-// let day = +prompt('Введіть порядковий номер дня тижня')
-// switch(day) {
-//     case 1:
-//         console.log('Monday')
-//         break
-//     case 2:
-//         console.log('Вівторок')
-//         break
-//     case 3:
-//         console.log('Середа')
-//         break
-//     case 4:
-//         console.log('Четвер')
-//         break
-//     case 5:
-//         console.log(`П'ятниця`)
-//         break
-//     case 6:
-//         console.log('Субота')
-//         break
-//     case 7:
-//         console.log('Неділя')
-//         break
-//     default:
-//         console.log('Немає стільки днів в тижні')
+// for (let i = 0; i < 10; i++) {
+//     document.write(`<div>Текст ${i}</div>`);
 // }
 //
-//     #uwsz1RnTQJ1
+// #uzkt71dp
 //
-// – Користувач вводить або має два числа.
+// – За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 //
-//         Потрібно знайти та вивести максимальне число з тих двох .
+// let x = 0;
+// while (x < 20) {
+//     document.write(`<div>${x} Текст</div>`);
+//     x++;
+// }
 //
-//         Також потрібно врахувати, коли введені рівні числа.
+//     #OeT7t3uUMFi
 //
-// let number1 = +prompt('Введіть 1 число')
-// let number2 = +prompt('Введіть 2 число')
-// if (number1 > number2) {
-//     console.log(number1)
-// } else if (number2 > number1) {
-//     console.log(number2)
-// } else if (number1 === number2) {
-//     console.log(number2)
-// } else {console.log(error)}
+// – За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
 //
-//         #iBvqtjEm
+// let x = 0;
+// while (x < 20) {
+//     document.write(`<div>Index - ${x} Текст</div>`);
+//     x++;
+// }
 //
-// – є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код, який
+//     #vLSZKMlO
 //
-//     буде присвоювати змінній х значення “default”,  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
+// – Використовуючи данні з масиву, за допомоги document.write та циклу
 //
-// let x = null;
-
-// if (x === 0 || x === undefined || x === null || x === "" || x === 'NaN' || x === false) {
-//     x = 'default'
-//     console.log(x)
-// } else {
-//     console.log(x)}
-// if (!x){
-//     x = 'default'
-//     console.log(x)
-// } else {
-//     console.log(x)}
+// побудувати структуру за шаблоном
 //
-//     #awLXL6TBzg
+// Масив:
+//   let listOfItems = [‘html’, ‘css’, ‘javascript’, ‘mysql’, ‘mongodb’, ‘react’, ‘angular’, ‘node.js’];
 //
-//     з файлу arrays.js ( лежить у вкладеннях)  взяти масив coursesAndDurationArray. За допомогою іф перевірити кожен його елемент на тривалість навчання. У випадку, якщо тривалість довша за 5 місяців, вивести в консоль “Супер”.
 //
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
+// ШАБЛОН:
+//
+//     <ul>
+//
+//         <li>ITEM OF ARRAY</li>
+//
+//         <!–
+//
+//         і тд інші об’єкти масиву
+//
+//         …
+//
+//         …
+//
+//         …
+//
+//         –>
+//
+//     </ul>
+//
+// замість ‘ITEM OF ARRAY’ підставити елемент з масиву, щоб вийшов цілий список з даними з масиву
+//
+// let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+// debugger
+// document.write(`<ul>`)
+// for (let item of listOfItems) {
+//     document.write(`<li>${item}`);
+// }
+// document.write(`</ul>`)
+//
+// #Hdjws7E
+//
+// Використовуючи данні з масиву, за допомоги document.write та циклу
+//
+// побудувати структуру по шаблону
+//
+// Великими літерами прописанні властивості об’єкту які потрібно впровадити в шаблон
+//
+// let products = [
+//
+//     {
+//
+//         title: ‘milk’,
+//
+// price: 22,
+//
+//     image: ‘https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300×300-3.jpg’
+//
+//     },
+//
+// {
+//
+//     title: ‘juice’,
+//
+//     price: 27,
+//
+//         image: ‘https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg’
+//
+// },
+//
+// {
+//
+//     title: ‘tomato’,
+//
+//     price: 47,
+//
+//         image: ‘https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74’
+//
+// },
+//
+// {
+//
+//     title: ‘tea’,
+//
+//     price: 15,
+//
+//         image: ‘https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png’
+//
+// },
+//
 // ];
 //
-// for (let course of coursesAndDurationArray) {
-//     if (course.monthDuration > 5) {
-//         console.log('Супер')
+//
+//
+// ШАБЛОН
+//
+// <div class=”product-card”>
+//
+// <h3 class=”product-title”>TITLE. Price – PRICE</h3>
+//
+// <img src=”IMAGE” alt=”” class=”product-image”>
+//
+// </div>
+//
+// Замість TITLE PRICE IMAGE – підставити відповідні поля з об’єкту
+//
+// let products = [
+//     {
+//         title: 'milk',
+//         price: 22,
+//         image: 'https://www.oldenburger-dairy.com/media/00/6c/e1/1737642194/11067_1l_3_5_410x410_full_cream_milk.png'
+//     },
+//     {
+//         title: 'juice',
+//         price: 27,
+//         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+//     },
+//     {
+//         title: 'tomato',
+//         price: 47,
+//         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+//     },
+//     {
+//         title: 'tea',
+//         price: 15,
+//         image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+//     },
+// ];
+//
+// for (let product of products) {
+//     document.write(`<div class="product-card">
+//     <h3 class="product-title">${product.title}. Price – ${product.price}</h3>
+//     <img src=${product.image} alt='Фото' class="product-image">
+// </div>`)
+// }
+//
+// #4WrHwFTEop0
+//
+// є масив
+//
+let users = [
+    {name: 'vasya', age: 31, status: false},
+    {name: 'petya', age: 30, status: true},
+    {name: 'kolya', age: 29, status: true},
+    {name: 'olya', age: 28, status: false},
+    {name: 'max', age: 30, status: true},
+    {name: 'anya', age: 31, status: false},
+    {name: 'oleg', age: 28, status: false},
+    {name: 'andrey', age: 29, status: true},
+    {name: 'masha', age: 30, status: true},
+    {name: 'olya', age: 31, status: false},
+    {name: 'max', age: 31, status: true}
+];
+//
+// за допомогою циклу вивести:
+//
+//     – користувачів зі статусом true
+//
+// for (let user of users) {
+//     if (user.status) {
+//         document.write(`<div>${user.name} - ${user.age}, ${user.status}</div>`);
 //     }
 // }
+//  – користувачів зі статусом false
+//
+// for (let user of users) {
+//     if (!user.status) {
+//         document.write(`<div>${user.name} - ${user.age}, ${user.status}</div>`)
+//     }
+// }
+//  – користувачів, які старші за 30 років
+//
+// debugger
+// for (let user of users) {
+//     if (user.age > 30) {
+//         document.write(`<div>${user.name} - ${user.age}, ${user.status}</div>`);
+//     }
+// }
+// =============
+//
+//     За допомогою циклу вивести всю інформацію про користувачів, використовуючи шаблон
+//
+//
+// за допомогою стилів, побудувати сітку по 2 об’єктах в рядок
+//
+// Матеріали уроку
+//
+let usersList = [
+    {
+        id: 1,
+        name: 'Leanne Graham',
+        username: 'Bret',
+        email: 'Sincere@april.biz',
+        address: {
+            street: 'Kulas Light',
+            suite: 'Apt. 556',
+            city: 'Gwenborough',
+            zipcode: '92998-3874',
+            geo: {
+                lat: '-37.3159',
+                lng: '81.1496'
+            }
+        },
+        phone: '1-770-736-8031 x56442',
+        website: 'hildegard.org',
+        company: {
+            name: 'Romaguera-Crona',
+            catchPhrase: 'Multi-layered client-server neural-net',
+            bs: 'harness real-time e-markets'
+        }
+    },
+    {
+        id: 2,
+        name: 'Ervin Howell',
+        username: 'Antonette',
+        email: 'Shanna@melissa.tv',
+        address: {
+            street: 'Victor Plains',
+            suite: 'Suite 879',
+            city: 'Wisokyburgh',
+            zipcode: '90566-7771',
+            geo: {
+                lat: '-43.9509',
+                lng: '-34.4618'
+            }
+        },
+        phone: '010-692-6593 x09125',
+        website: 'anastasia.net',
+        company: {
+            name: 'Deckow-Crist',
+            catchPhrase: 'Proactive didactic contingency',
+            bs: 'synergize scalable supply-chains'
+        }
+    },
+    {
+        id: 3,
+        name: 'Clementine Bauch',
+        username: 'Samantha',
+        email: 'Nathan@yesenia.net',
+        address: {
+            street: 'Douglas Extension',
+            suite: 'Suite 847',
+            city: 'McKenziehaven',
+            zipcode: '59590-4157',
+            geo: {
+                lat: '-68.6102',
+                lng: '-47.0653'
+            }
+        },
+        phone: '1-463-123-4447',
+        website: 'ramiro.info',
+        company: {
+            name: 'Romaguera-Jacobson',
+            catchPhrase: 'Face to face bifurcated interface',
+            bs: 'e-enable strategic applications'
+        }
+    },
+    {
+        id: 4,
+        name: 'Patricia Lebsack',
+        username: 'Karianne',
+        email: 'Julianne.OConner@kory.org',
+        address: {
+            street: 'Hoeger Mall',
+            suite: 'Apt. 692',
+            city: 'South Elvis',
+            zipcode: '53919-4257',
+            geo: {
+                lat: '29.4572',
+                lng: '-164.2990'
+            }
+        },
+        phone: '493-170-9623 x156',
+        website: 'kale.biz',
+        company: {
+            name: 'Robel-Corkery',
+            catchPhrase: 'Multi-tiered zero tolerance productivity',
+            bs: 'transition cutting-edge web services'
+        }
+    },
+    {
+        id: 5,
+        name: 'Chelsey Dietrich',
+        username: 'Kamren',
+        email: 'Lucio_Hettinger@annie.ca',
+        address: {
+            street: 'Skiles Walks',
+            suite: 'Suite 351',
+            city: 'Roscoeview',
+            zipcode: '33263',
+            geo: {
+                lat: '-31.8129',
+                lng: '62.5342'
+            }
+        },
+        phone: '(254)954-1289',
+        website: 'demarco.info',
+        company: {
+            name: 'Keebler LLC',
+            catchPhrase: 'User-centric fault-tolerant solution',
+            bs: 'revolutionize end-to-end systems'
+        }
+    },
+    {
+        id: 6,
+        name: 'Mrs. Dennis Schulist',
+        username: 'Leopoldo_Corkery',
+        email: 'Karley_Dach@jasper.info',
+        address: {
+            street: 'Norberto Crossing',
+            suite: 'Apt. 950',
+            city: 'South Christy',
+            zipcode: '23505-1337',
+            geo: {
+                lat: '-71.4197',
+                lng: '71.7478'
+            }
+        },
+        phone: '1-477-935-8478 x6430',
+        website: 'ola.org',
+        company: {
+            name: 'Considine-Lockman',
+            catchPhrase: 'Synchronised bottom-line interface',
+            bs: 'e-enable innovative applications'
+        }
+    },
+    {
+        id: 7,
+        name: 'Kurtis Weissnat',
+        username: 'Elwyn.Skiles',
+        email: 'Telly.Hoeger@billy.biz',
+        address: {
+            street: 'Rex Trail',
+            suite: 'Suite 280',
+            city: 'Howemouth',
+            zipcode: '58804-1099',
+            geo: {
+                lat: '24.8918',
+                lng: '21.8984'
+            }
+        },
+        phone: '210.067.6132',
+        website: 'elvis.io',
+        company: {
+            name: 'Johns Group',
+            catchPhrase: 'Configurable multimedia task-force',
+            bs: 'generate enterprise e-tailers'
+        }
+    },
+    {
+        id: 8,
+        name: 'Nicholas Runolfsdottir V',
+        username: 'Maxime_Nienow',
+        email: 'Sherwood@rosamond.me',
+        address: {
+            street: 'Ellsworth Summit',
+            suite: 'Suite 729',
+            city: 'Aliyaview',
+            zipcode: '45169',
+            geo: {
+                lat: '-14.3990',
+                lng: '-120.7677'
+            }
+        },
+        phone: '586.493.6943 x140',
+        website: 'jacynthe.com',
+        company: {
+            name: 'Abernathy Group',
+            catchPhrase: 'Implemented secondary concept',
+            bs: 'e-enable extensible e-tailers'
+        }
+    },
+    {
+        id: 9,
+        name: 'Glenna Reichert',
+        username: 'Delphine',
+        email: 'Chaim_McDermott@dana.io',
+        address: {
+            street: 'Dayna Park',
+            suite: 'Suite 449',
+            city: 'Bartholomebury',
+            zipcode: '76495-3109',
+            geo: {
+                lat: '24.6463',
+                lng: '-168.8889'
+            }
+        },
+        phone: '(775)976-6794 x41206',
+        website: 'conrad.com',
+        company: {
+            name: 'Yost and Sons',
+            catchPhrase: 'Switchable contextually-based project',
+            bs: 'aggregate real-time technologies'
+        }
+    },
+    {
+        id: 10,
+        name: 'Clementina DuBuque',
+        username: 'Moriah.Stanton',
+        email: 'Rey.Padberg@karina.biz',
+        address: {
+            street: 'Kattie Turnpike',
+            suite: 'Suite 198',
+            city: 'Lebsackbury',
+            zipcode: '31428-2261',
+            geo: {
+                lat: '-38.2386',
+                lng: '57.2232'
+            }
+        },
+        phone: '024-648-3804',
+        website: 'ambrose.net',
+        company: {
+            name: 'Hoeger LLC',
+            catchPhrase: 'Centralized empowering task-force',
+            bs: 'target end-to-end models'
+        }
+    }
+];
+//
+document.write(`<div class="users-box">`)
+for (let user of usersList) {
+    document.write(`<div class="user-block">
+        <h2>${user.id} – ${user.name} – ${user.username} </h2>
+        <h3>${user.email} – ${user.phone}</h3>
+        <div class="address-block">
+            <p>City – ${user.address.city}</p>
+            <p>Street – ${user.address.street}</p>
+            <p>Suite – ${user.address.suite}</p>
+            <p>Zip code – ${user.address.zipcode}</p>
+        </div>`)
+}
+document.write(`</div>`)
+
