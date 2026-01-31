@@ -118,25 +118,64 @@
 //
 // (в першу, другу, третю або четверту частину години).
 //
+// let time = +prompt("Введіть від 0 до 59?");
 //
-//
-//
+// if (time >= 0 && time <= 14) {
+//     console.log('1 чверть')
+// } else if (time >= 15 && time <= 29) {
+//     console.log('2 чверть')
+// } else if (time >= 30 && time <= 44) {
+//     console.log('3 чверть')
+// } else if (time >= 45 && time <= 59) {
+//     console.log('4 чверть')
+// } else {
+//     console.log('Введіть від 0 до 59')
+// }
 //
 // #UMoNq4biWGe
 //
 // – У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину (декаду) місяця потрапляє це число (у першу, другу чи третю).
 //
+// let day = +prompt("Wot day?");
 //
-//
-//
+// if (day > 0 && day <= 10) {
+//     console.log('перша декада місяця')
+// } else if (day >= 11 && day <= 20) {
+//     console.log('Друга декада місяця')
+// } else if (day >= 21 && day <= 31) {
+//     console.log('Третя декада місяця')
+// } else {console.log('В місяці немає стільки днів')}
 //
 // #KzrtqyQ
 //
 // – Скласти розклад на тиждень за домопогою switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа, що заплановано на цей день (можна замість плану на день, назву дня англійською).
 //
-//
-//
-//
+// let day = +prompt('Введіть порядковий номер дня тижня')
+// switch(day) {
+//     case 1:
+//         console.log('Monday')
+//         break
+//     case 2:
+//         console.log('Вівторок')
+//         break
+//     case 3:
+//         console.log('Середа')
+//         break
+//     case 4:
+//         console.log('Четвер')
+//         break
+//     case 5:
+//         console.log(`П'ятниця`)
+//         break
+//     case 6:
+//         console.log('Субота')
+//         break
+//     case 7:
+//         console.log('Неділя')
+//         break
+//     default:
+//         console.log('Немає стільки днів в тижні')
+// }
 //
 //     #uwsz1RnTQJ1
 //
@@ -146,9 +185,15 @@
 //
 //         Також потрібно врахувати, коли введені рівні числа.
 //
-//
-//
-//
+// let number1 = +prompt('Введіть 1 число')
+// let number2 = +prompt('Введіть 2 число')
+// if (number1 > number2) {
+//     console.log(number1)
+// } else if (number2 > number1) {
+//     console.log(number2)
+// } else if (number1 === number2) {
+//     console.log(number2)
+// } else {console.log(error)}
 //
 //         #iBvqtjEm
 //
@@ -156,10 +201,34 @@
 //
 //     буде присвоювати змінній х значення “default”,  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
 //
-//
-//
-//
+// let x = null;
+
+// if (x === 0 || x === undefined || x === null || x === "" || x === 'NaN' || x === false) {
+//     x = 'default'
+//     console.log(x)
+// } else {
+//     console.log(x)}
+// if (!x){
+//     x = 'default'
+//     console.log(x)
+// } else {
+//     console.log(x)}
 //
 //     #awLXL6TBzg
 //
 //     з файлу arrays.js ( лежить у вкладеннях)  взяти масив coursesAndDurationArray. За допомогою іф перевірити кожен його елемент на тривалість навчання. У випадку, якщо тривалість довша за 5 місяців, вивести в консоль “Супер”.
+//
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+//
+// for (let course of coursesAndDurationArray) {
+//     if (course.monthDuration > 5) {
+//         console.log('Супер')
+//     }
+// }
