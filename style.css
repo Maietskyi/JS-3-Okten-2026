@@ -1,52 +1,52 @@
-/*!* контейнер *!*/
-/*.users-box {*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(2, 1fr);*/
-/*    gap: 24px;*/
-/*    padding: 30px;*/
-/*    background-color: #f4f6f8;*/
-/*    font-family: Arial, sans-serif;*/
-/*}*/
+/* контейнер */
+.users-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 30px;
+    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+}
 
-/*!* карточка користувача *!*/
-/*.user-block {*/
-/*    background: #ffffff;*/
-/*    border-radius: 12px;*/
-/*    padding: 20px 24px;*/
-/*    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);*/
-/*    transition: transform 0.2s ease, box-shadow 0.2s ease;*/
-/*}*/
+/* карточка користувача */
+.user-block {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-/*.user-block:hover {*/
-/*    transform: translateY(-4px);*/
-/*    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);*/
-/*}*/
+.user-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
 
-/*!* заголовки *!*/
-/*.user-block h2 {*/
-/*    font-size: 18px;*/
-/*    margin-bottom: 10px;*/
-/*    color: #2c3e50;*/
-/*}*/
+/* заголовки */
+.user-block h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
 
-/*.user-block h3 {*/
-/*    font-size: 14px;*/
-/*    font-weight: normal;*/
-/*    margin-bottom: 16px;*/
-/*    color: #555;*/
-/*}*/
+.user-block h3 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 16px;
+    color: #555;
+}
 
-/*!* адреса *!*/
-/*.address-block {*/
-/*    padding-top: 12px;*/
-/*    border-top: 1px solid #e0e0e0;*/
-/*}*/
+/* адреса */
+.address-block {
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0;
+}
 
-/*.address-block p {*/
-/*    margin: 4px 0;*/
-/*    font-size: 13px;*/
-/*    color: #666;*/
-/*}*/
+.address-block p {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #666;
+}
 
 /*.users-box {*/
 /*    display: grid;*/
