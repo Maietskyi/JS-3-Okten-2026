@@ -4,46 +4,184 @@
 // –створити масив з:
 //
 //     – з 5 числових значень
-//
-// – з 5 стічкових значень
-//
-// – з 5 значень стрічкового, числового та булевого типу
-//
-// – та вивести його в консоль
+// let arrN = [5, 54, 78, 84, 214]
+// //
+// // – з 5 стічкових значень
+// let arrS = ['Okten', 'school', 'Maietskyi', 'Java Script', 'Full stack']
+// //
+// // – з 5 значень стрічкового, числового та булевого типу
+// let arrM = ['Maietskyi', 108, true, 'Okten', 266, false, 'JavaScript']
+// //
+// // – та вивести його в консоль
+// console.log(arrN, arrS, arrM)
 //
 // #4aDbSgh
 //
 // — Створити пустий масив. Наповнити його будь-якими значеннями, звертаючись до конкретного індексу. Вивести в консоль
 //
-//
-//
-//
-//
-//
+// let arr = []
+// arr[0] = 1;
+// arr[2] = 3;
+// arr[4] = 5;
+// arr[3] = 4;
+// arr[1] = 2;
+// console.log(arr)
 //
 // #qLQLJSeN7i
 //
 // – є масив [2,17,13,6,22,31,45,66,100,-18] :
+let arr = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 //
 // 1. перебрати його циклом while
+// let i = 0;
+// while (i < arr.length) {
+//     console.log(arr[i]);
+//     i++
+// }
 //
 //     2. перебрати його циклом for
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+//
+// for (let i of arr) {
+//     console.log(i);
+// }
 //
 //     3. перебрати циклом while та вивести  числа тільки з непарним індексом
+// let i = 0;
+// // debugger
+// while (i < arr.length) {
+//     if (arr[i] % 2 !== 0) {
+//         console.log(arr[i])
+//     }
+//     i++
+// }
 //
 // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 !== 0) {
+//         console.log(arr[i]);
+//     }
+// }
+//
+// for (let i of arr) {
+//     if (i % 2 !== 0) {
+//         console.log(i);
+//     }
+// }
 //
 // 5. перебрати циклом while та вивести  числа тільки парні  значення
+// let i = 0;
+// while (i < arr.length) {
+//     if (arr[i] % 2 === 0) {
+//         console.log(arr[i]);
+//     }
+//     i++
+// }
 //
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) console.log(arr[i]);
+// }
 //
 // 7. замінити кожне число, кратне 3, на слово “okten”
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 3 === 0) {
+//         arr[i] = 'Okten'
+//     }
+// }
+// console.log(arr)
+//
+// let i = 0;
+// while (i < arr.length) {
+//     if (arr[i] % 3 === 0) arr[i] = 'Okten'
+//     i++
+// }
+// console.log(arr)
 //
 // 8. вивести масив у зворотньому порядку.
+// for (let i= arr.length; i > 0; i--) {
+//     console.log(arr[i]);
+// }
+//
+// let i = arr.length;
+// while (i > 0) {
+//     console.log(arr[i])
+//     i--
+// }
 //
 // 9. всі попередні завдання (окрім 8), але у зворотньому циклі (задом наперед)
 //
+// 1. перебрати його циклом while
+// let i = arr.length;
+// while (i > 0) {
+//     console.log(arr[i]);
+//     i--
+// }
 //
+//     2. перебрати його циклом for
+// for (let i = arr.length; i > 0; i--){
+//     console.log(arr[i]);
+// }
+//
+// for (let i of arr) {
+//     console.log(i);
+// }
+//
+//     3. перебрати циклом while та вивести  числа тільки з непарним індексом
+// let i = arr.length;
+// // debugger
+// while (i > 0) {
+//     if (arr[i] % 2 !== 0) {
+//         console.log(arr[i])
+//     }
+//     i--
+// }
+//
+// 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+// for (let i = arr.length; i > 0; i--) {
+//     if (arr[i] % 2 !== 0) {
+//         console.log(arr[i]);
+//     }
+// }
+//
+// for (let i of arr) {
+//     if (i % 2 !== 0) {
+//         console.log(i);
+//     }
+// }
+//
+// 5. перебрати циклом while та вивести  числа тільки парні  значення
+// let i = arr.length;
+// debugger
+// while (i > 0) {
+//     if (arr[i] % 2 === 0) {
+//         console.log(arr[i]);
+//     }
+//     i--
+// }
+//
+// 6. перебрати циклом for та вивести  числа тільки парні  значення
+// for (let i = arr.length; i > 0; i--) {
+//     if (arr[i] % 2 === 0) console.log(arr[i]);
+// }
+//
+// 7. замінити кожне число, кратне 3, на слово “okten”
+// for (let i = arr.length-1; i > 0; i--) {
+//     if (arr[i] % 3 === 0) {
+//         arr[i] = 'Okten'
+//     }
+//     console.log(arr[i])
+// }
+// console.log(arr)
+// //
+// let i = arr.length - 1;
+// while (i > 0) {
+//     if (arr[i] % 3 === 0) arr[i] = 'Okten'
+//     console.log(arr[i])
+//     i--
+// }
 //
 // #yHAwJOyiC
 //
