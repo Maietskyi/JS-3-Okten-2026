@@ -138,13 +138,28 @@
 //
 // – створити функцію, яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл) та виводить його через document.write
 //
-
+// function builds(text, num) {
+//     document.write(`<ul>`)
+//     for (let i = 0; i < num; i++) {
+//         document.write(`<li>${text}</li>`)
+//     }
+//     document.write(`</ul>`)
+// }
+// builds('Misha', 5)
 //
 // #gEFoxMMO
 //
 // – створити функцію, яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write
 //
-
+// function writer(arr) {
+//     document.write(`<ul>`)
+//     for (let ar of arr) {
+//         document.write(`<li>${ar}</li>`)
+//     }
+//     document.write(`</ul>`)
+// }
+// let arrM = ['Maietskyi', 108, true, 'Okten', 266, false, 'JavaScript']
+// writer(arrM)
 //
 // #bovDJDTIjt
 //
