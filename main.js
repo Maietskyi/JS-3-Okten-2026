@@ -680,8 +680,8 @@
 // console.log(arr1);
 //
 // – Дано масив: [ ‘a’, ‘b’, ‘c’] . За допомогою циклу for зібрати всі букви в слово.
-let abc = ['a', 'b', 'c']
-let str = '';
+// let abc = ['a', 'b', 'c']
+// let str = '';
 // for (let i = 0; i < abc.length; i++) {
 //     str += abc[i]
 // }
