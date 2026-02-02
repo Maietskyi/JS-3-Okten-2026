@@ -165,19 +165,49 @@
 //
 // – створити функцію, яка приймає масив об’єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об’єкту окремий блок.
 //
-//
+// function solve(array) {
+//     for (let user of array) {
+//         document.write(`<p>${user.id} ${user.name} ${user.age}</p>`)
+//     }
+// }
+// let usersWithId = [
+//     {id: 1, name: 'vasya', age: 31, status: false},
+//     {id: 2, name: 'petya', age: 30, status: true},
+//     {id: 3, name: 'kolya', age: 29, status: true},
+//     {id: 4, name: 'olya', age: 28, status: false}
+// ];
+// solve(usersWithId)
 //
 //     #pghbnSB
 //
 // – створити функцію яка повертає найменьше число з масиву
 //
+// function min(array) {
+//     let numMin = array[0];
+//     for (let num of array) {
+//         if (num < numMin) {
+//             numMin = num;
+//         }
+//     }
+//     console.log(numMin);
+// }
 //
+// let arrNum = [21, 713, 672, 582, 942, 548, 19, 931, 185, 321, 32, 363, 632, 453, 258, 729, 277, 215, 690, 976];
+// min(arrNum);
 //
 // #EKRNVPM
 //
 // – створити функцію sum(arr), яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 //
+// function sum(arr) {
+//     let sum = 0;
+//     for (let i of arr) {
+//         sum += i
+//     }
+//     console.log(sum)
+// }
 //
+// sum([1, 2, 10])
 //
 // #kpsbSQCt2Lf
 //
@@ -185,10 +215,44 @@
 //
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 //
+// function swap(arr, index1, index2) {
+//     ind = arr[index1];
+//     arr[index1] = arr[index2];
+//     arr[index2] = ind;
 //
+//     return arr;
+// }
+//
+// console.log(swap([11, 22, 33, 44], 0, 1));
 //
 // #mkGDenYnNjn.html
 //
 // Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 //
 // Приклад exchange(10000,[{currency:’USD’,value:25},{currency:’EUR’,value:42}],’USD’) // => 400
+//
+// function exchange(sumUAH, currencyValues, exchangeCurrency) {
+//     for (let currencyValue of currencyValues) {
+//         if (exchangeCurrency === currencyValue.currency) {
+//             return sumUAH / currencyValues.value
+//         }
+//     }
+// }
+//
+// let value = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD')
+//
+// console.log(value)
+
+// function exchange(sumUAH, currencyValues, exchangeCurrency) {
+//     for (let i = 0; i < currencyValues.length; i++) {
+//         if (exchangeCurrency === currencyValues[i].currency) {
+//             return sumUAH / currencyValues[i].value
+//         }
+//     }
+// }
+//
+// let value = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD')
+// let value2 = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'EUR')
+//
+// console.log(value)
+// console.log(value2)
