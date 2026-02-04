@@ -66,6 +66,10 @@
 // }
 //
 // console.log(stringToarray(str));
+
+// let string = 'Мені тринадцятий минало я пас ягнята за селом'
+// let arr = (str) => str.split(' ')
+// console.log(arr(string))
 //
 // let str = `Ревуть воли як ясла повні`;
 //
@@ -73,25 +77,52 @@
 //
 // console.log(stringToarray(str));
 //
+// let str1 = 'Як умру то поховайте мене на могилі серед степу широкого на Вкраїні милі'
+//
+// let stringToArray = (string) => string.split(' ')
+// console.log(stringToArray(str1))
+//
 // #Rbr5kEQ
 //
 // – є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об’єкти в масиві на стрінгові.
 //
+// let numbers = [10, 8, -7, 55, 987, -1011, 0, 1050, 0]
+// console.log(numbers.map(number => number.toString()));
 //
+// let num = [10, 8, -7, 55, 987, -1011, 0, 1050, 0]
+//
+// console.log(num.map(item => item.toString()));
 //
 // #5hqyKTfmc
 //
 // – створити функцію sortNums(array,direction), яка приймає масив чисел, та сортує його від більшого до меншого, або навпаки  – залежно від значення аргументу direction.
 //
-//     let nums = [11,21,3];
+// let nums = [11, 21, 3];
 //
 // sortNums(nums,’ascending’) // [3,11,21]
 //
 // sortNums(nums,’descending’) // [21,11,3]
 //
+// function sortNums(array, direction) {
+//     if (direction === 'ascending') {
+//         return array.sort((a, b) => a - b)
+//     }
+//     if (direction === 'descending') {
+//         return array.sort((a, b) => b - a)
+//     }
+// }
 //
+// console.log(sortNums(nums, 'ascending')); // [3,11,21]
 //
+// console.log(sortNums(nums, 'descending')); // [21,11,3]
 //
+// let sortNums = (array, direction) => {
+//     if (direction === 'ascending') {return array.sort((a, b) => a - b)}
+//     if (direction === 'descending') {return array.sort((a, b) => b - a)}
+// }
+//
+// console.log(sortNums([33,56,2,97,1,24,6], 'ascending'))
+// console.log(sortNums([33,56,2,97,1,24,6], 'descending'))
 //
 // ==========================
 //
