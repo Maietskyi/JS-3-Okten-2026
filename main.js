@@ -1,539 +1,181 @@
-// JS. ДЗ 5
+// JS. ДЗ 6
 // Коди з лекцій та коди з ДЗ
 //
 // https://github.com/OktenSchool/javascript.git
-
 //
-//     Тут ті самі завдання, що і в занятті про базові функції, але зробити їх потрібно за допомоги стрілочних функцій !!!
 //
-
-// #I2XsG6f
-
-// – створити функцію, яка обчислює та повертає площу прямокутника зі сторонами  а і б
-// let area = (a, b) => a * b
-// console.log(area(5, 6))
-
-// #ETGAxbEn8l
-
-// – створити функцію, яка обчислює та повертає площу кола з радіусом r
-// let areaKolo = (r) => r * 3.14
-// console.log(areaKolo(4))
-
-// #Mbiz5K4yFe7
-
-// – створити функцію, яка обчислює та повертає площу циліндру висотою h, та радіусом r
-// let areaKub = (h, r) => h * r * r * 3.14
-// console.log(areaKub(8, 5))
-
-// #SIdMd0hQ
-
-// – створити функцію, яка приймає масив та виводить кожен його елемент
-
-// let printer = (array) => {
-//     for (let arr of array) {
-//         console.log(arr)
-//         document.write(`<p>${arr.title}</p>`)
-//     }
-// }
 //
-// let books = [
-//     {
-//         title: "Тіні забутих предків",
-//         pages: 160,
-//         authors: ["Михайло Коцюбинський"],
-//         genres: ["драма", "історичний роман"]
-//     },
-//     {
-//         title: "Гаррі Поттер і філософський камінь",
-//         pages: 320,
-//         authors: ["Джоан Роулінг"],
-//         genres: ["фентезі", "пригоди"]
-//     },
-//     {
-//         title: "Майстер і Маргарита",
-//         pages: 400,
-//         authors: ["Михайло Булгаков", "Райс"],
-//         genres: ["містика", "фантастика", "сатира"]
-//     },
-//     {
-//         title: "Сто років самотності",
-//         pages: 450,
-//         authors: ["Габрієль Гарсія Маркес"],
-//         genres: ["магічний реалізм", "роман",]
-//     },
-//     {
-//         title: "Кобзар",
-//         pages: 250,
-//         authors: ["Тарас Шевченко", "Українка", "Франко"],
-//         genres: ["поезія", "класика"]
-//     },
-//     {
-//         title: "1984",
-//         pages: 328,
-//         authors: ["Джордж Орвелл"],
-//         genres: ["антиутопія", "політична фантастика"]
-//     },
-//     {
-//         title: "Портрет Доріана Грея",
-//         pages: 310,
-//         authors: ["Оскар Вайльд"],
-//         genres: ["роман", "філософська проза"]
-//     },
-//     {
-//         title: "Злочин і кара",
-//         pages: 430,
-//         authors: ["Федір Достоєвський"],
-//         genres: ["роман", "драма", "психологія", "автобіографія"]
-//     },
-//     {
-//         title: "Пригоди Тома Сойєра",
-//         pages: 290,
-//         authors: ["Марк Твен"],
-//         genres: ["пригоди", "гумор", "дитяча література"]
-//     },
-//     {
-//         title: "Лісова пісня",
-//         pages: 180,
-//         authors: ["Леся Українка"],
-//         genres: ["драма-феєрія", "поезія", "українська класика"]
-//     }
+//     #dFeorS3m7u
+//
+// – Знайти та вивести довжину наступних стрінгових значень
+//
+//  ‘hello world’
+// console.log(`hello world`.length);
+//
+// ‘lorem ipsum’
+// console.log(`lorem ipsum`.length);
+//
+// ‘javascript is cool’
+// console.log(`hello world`.length);
+//
+//
+//
+// #8lld9HMxXWB
+//
+// – Перевести до великого регістру наступні стрінгові значення
+//
+//       ‘hello world’, ‘lorem ipsum’, ‘javascript is cool’
+//
+//
+//
+// #ClDsAm7xba7
+//
+// – Перевести до нижнього регістру наступні стрінгові значення
+//
+//       ‘HELLO WORLD’, ‘LOREM IPSUM’, ‘JAVASCRIPT IS COOL’
+//
+//
+//
+// #0b89BkYZwu
+//
+// – Є “брудна” стрінга let str = ‘ dirty string   ‘ . Почистити її від зайвих пробілів.
+//
+//
+//
+//
+//
+//     #bfoJuse4ZzP
+//
+// – Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+//
+//     let str = ‘Ревуть воли як ясла повні’;
+//
+// let arr = stringToarray(str); [‘Ревуть’, ‘воли’, ‘як’, ‘ясла’, ‘повні’]
+//
+//
+//
+//
+//
+// #Rbr5kEQ
+//
+// – є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об’єкти в масиві на стрінгові.
+//
+//
+//
+// #5hqyKTfmc
+//
+// – створити функцію sortNums(array,direction), яка приймає масив чисел, та сортує його від більшого до меншого, або навпаки  – залежно від значення аргументу direction.
+//
+//     let nums = [11,21,3];
+//
+// sortNums(nums,’ascending’) // [3,11,21]
+//
+// sortNums(nums,’descending’) // [21,11,3]
+//
+//
+//
+//
+//
+// ==========================
+//
+// #yo06d74c1C
+//
+// – є масив
+//
+// let coursesAndDurationArray = [
+//
+//     {title: ‘JavaScript Complex’, monthDuration: 5},
+//
+// {title: ‘Java Complex’, monthDuration: 6},
+//
+// {title: ‘Python Complex’, monthDuration: 6},
+//
+// {title: ‘QA Complex’, monthDuration: 4},
+//
+// {title: ‘FullStack’, monthDuration: 7},
+//
+// {title: ‘Frontend’, monthDuration: 4}
+//
 // ];
 //
-// printer(books)
-
-// #59g0IsA
-
-// – створити функцію, яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент
-// let writer = (text) => document.write(`<p>${text}</p>`)
+//  — відсортувати його за спаданням за monthDuration
 //
-// writer('cтворити функцію, яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент')
-// writer('створити функцію, яка створює ul з трьома елементами li та виводить його через document.write. Текст li задати через аргумент всім однаковий')
-
-// #hOL6126
-
-// – створити функцію, яка створює ul з трьома елементами li та виводить його через document.write. Текст li задати через аргумент всім однаковий
-// let writer = (text) => {
-//     document.write(`<ul>
-//         <li>${text}</li>
-//         <li>${text}</li>
-//         <li>${text}</li>
-//         </ul>`)
+//  — відфільтрувати, залишивши тільки курси з тривалістю понад 5 місяців
+//
+//  — за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// #4LJn7zBx
+//
+// взяти з arrays.js масив coursesArray
+//
+// –написати пошук всіх об’єктів, в яких в modules є sass
+//
+// –написати пошук всіх об’єктів, в яких в modules є docker
+//
+//
+//
+//
+//
+// #bolvdlhP
+//
+// описати колоду карт (від 6 до туза без джокерів). Більшу частину колоди можна описати з використанням циклу
+//
+// Після опису, використовуючи функції масивів:
+//
+//     – знайти піковий туз
+//
+//  – всі шістки
+//
+//  – всі червоні карти
+//
+//  – всі буби
+//
+//  – всі трефи від 9 та більше
+//
+//
+//
+// Приклад моделі об’єкту карти:
+//
+// {
+//
+//     cardSuit: ”, // ‘spade’, ‘diamond’,’heart’, ‘clubs’
+//
+//     value: ”, // ‘6’-’10’, ‘ace’,’jack’,’queen’,’king’
+//
+//     color:”, // ‘red’,’black’
+//
 // }
 //
-// writer('Misha');
-// writer('Okten');
-
-// #0Kxco1edSN
-
-// – створити функцію, яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл) та виводить його через document.write
-
-// let writer = (text, index) => {
-//     document.write(`<ul>`)
-//     for (i = 0; i < index; i++) {
-//         document.write(`<li>${text}</li>`)
-//     }
-//     document.write(`</ul>`)
+//
+//
+//
+//
+//
+//
+// #EP5I1UUzAX
+//
+// Взяти описану колоду карт, та за допомогою reduce “упакувати” всі карти по “мастях” в об’єкт
+//
+// Приклад моделі кінцевого об’єкту
+//
+// {
+//
+//     spades:[],
+//
+//         diamonds:[],
+//
+//     hearts:[],
+//
+//     clubs:[]
+//
 // }
-//
-// writer('Misha', 3);
-// writer('Okten', 14);
-
-// #gEFoxMMO
-
-// – створити функцію, яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write
-
-// let writer = (array) => {
-//     document.write(`<ul>`)
-//     for (i = 0; i < array.length; i++) {
-//         document.write(`<li>${array[i]}</li>`)
-//     }
-//     document.write(`</ul>`)
-// }
-//
-// writer(['Misha', 3, true, 56]);
-
-// let writer = (array) => {
-//     document.write(`<ul>`)
-//     for (const item of array) {
-//         document.write(`<li>${item}</li>`)
-//     }
-//     document.write(`</ul>`)
-// }
-//
-// writer(['Misha', 3, true, 56]);
-
-// #bovDJDTIjt
-
-// – створити функцію, яка приймає масив об’єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об’єкту окремий блок.
-
-// let solve = (obj) => {
-//     for (let ob of obj) {
-//         document.write(`<div>${ob.id}, ${ob.name}, ${ob.age}</div>`)
-//     }
-// }
-//
-// let users = [
-//     {
-//         id: 1,
-//         name: 'Misha',
-//         age: 34
-//     },
-//     {
-//         id: 2,
-//         name: 'Vika',
-//         age: 25
-//     },
-//     {
-//         id: 3,
-//         name: 'Roman',
-//         age: 19
-//     },
-//     {
-//         id: 4,
-//         name: 'Maria',
-//         age: 42
-//     }
-// ]
-//
-// solve(users)
-
-// solve([
-//     {
-//         id: 1,
-//         name: 'Misha',
-//         age: 64
-//     },
-//     {
-//         id: 2,
-//         name: 'Misha',
-//         age: 64
-//     },
-//     {
-//         id: 3,
-//         name: 'Misha',
-//         age: 64
-//     },
-//     {
-//         id: 4,
-//         name: 'Misha',
-//         age: 64
-//     }
-// ]);
-
-// #pghbnSB
-
-// – створити функцію яка повертає найменьше число з масиву
-
-// let minNumber = (number) => {
-//     let min = number[0];
-//     for (let i = 1; i <= number.length; i++) {
-//         if (i < min) {
-//             min = number[i];
-//         }
-//     }
-//     return min;
-// }
-//
-// console.log(minNumber([54, 11, 68, 102, -10]));
-
-// #EKRNVPM
-
-// – створити функцію sum(arr), яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-//
-// let sum = (arr) => {
-//     let summa = 0;
-//     for (let i = 0; i < arr.length; i++) {
-//         summa += arr[i];
-//     }
-//     return summa;
-// }
-//
-// console.log(sum([1, 2, 10]));
-
-// #kpsbSQCt2Lf
-
-// – створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах
-
-// Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
-
-// let swap = (arr, index1, index2) => {
-//     let zam = arr[index1];
-//     arr[index1] = arr[index2];
-//     arr[index2] = zam;
-//     return arr;
-// }
-//
-// console.log(swap([11, 22, 33, 44], 0, 1));
-
-// #mkGDenYnNjn.html
-
-//  Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
-
-// Приклад exchange(10000,[{currency:’USD’,value:25},{currency:’EUR’,value:42}],’USD’) // => 400
-// debugger
-
-// let exchange = (sumUAH, currencyValues, exchangeCurrency) => {
-//     for (let currencyValue of currencyValues) {
-//         if (currencyValue.currency === exchangeCurrency) {
-//             return sumUAH / currencyValue.value
-//         }
-//     }
-// }
-//
-// console.log(exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD'))
-// debugger
-// let exchange = (sumUAH, currencyValues, exchangeCurrency) => {
-//     for (let i = 0; i < currencyValues.length; i++) {
-//         if (currencyValues[i].currency === exchangeCurrency) {
-//             return sumUAH / currencyValues[i].value
-//         }
-//     }
-// }
-//
-// let value = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD')
-// let value2 = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'EUR')
-//
-// console.log(value)
-// console.log(value2)
-//
-//==============================================================================================================================
-//     #I2XsG6f
-//
-// – створити функцію, яка обчислює та повертає площу прямокутника зі сторонами  а і б
-//
-// let area = (a, b) => a * b
-// console.log(area(52, 31))
-//
-// #ETGAxbEn8l
-//
-// – створити функцію, яка обчислює та повертає площу кола з радіусом r
-//
-// let areaKolo = (r) => 3.14 * (r * r)
-// console.log(areaKolo(10));
-//
-// let areaKolo1 = (r) => Math.PI * r * r
-// console.log(areaKolo1(8));
-//
-// #Mbiz5K4yFe7
-//
-// – створити функцію, яка обчислює та повертає площу циліндру висотою h, та радіусом r
-//
-// let area = (h, r) => 2 * Math.PI * r * (r + h)
-// console.log(area(5, 3))
-//
-// #SIdMd0hQ
-//
-// – створити функцію, яка приймає масив та виводить кожен його елемент
-//
-// let writer = (arr) => {
-//     for (let ar of arr) {
-//         console.log(ar)
-//         document.write(`<p>${ar.title}</p>`)
-//     }
-// }
-// let books = [
-//     {
-//         title: "Тіні забутих предків",
-//         pages: 160,
-//         authors: ["Михайло Коцюбинський"],
-//         genres: ["драма", "історичний роман"]
-//     },
-//     {
-//         title: "Гаррі Поттер і філософський камінь",
-//         pages: 320,
-//         authors: ["Джоан Роулінг"],
-//         genres: ["фентезі", "пригоди"]
-//     },
-//     {
-//         title: "Майстер і Маргарита",
-//         pages: 400,
-//         authors: ["Михайло Булгаков", "Райс"],
-//         genres: ["містика", "фантастика", "сатира"]
-//     },
-//     {
-//         title: "Сто років самотності",
-//         pages: 450,
-//         authors: ["Габрієль Гарсія Маркес"],
-//         genres: ["магічний реалізм", "роман",]
-//     },
-//     {
-//         title: "Кобзар",
-//         pages: 250,
-//         authors: ["Тарас Шевченко", "Українка", "Франко"],
-//         genres: ["поезія", "класика"]
-//     },
-//     {
-//         title: "1984",
-//         pages: 328,
-//         authors: ["Джордж Орвелл"],
-//         genres: ["антиутопія", "політична фантастика"]
-//     },
-//     {
-//         title: "Портрет Доріана Грея",
-//         pages: 310,
-//         authors: ["Оскар Вайльд"],
-//         genres: ["роман", "філософська проза"]
-//     },
-//     {
-//         title: "Злочин і кара",
-//         pages: 430,
-//         authors: ["Федір Достоєвський"],
-//         genres: ["роман", "драма", "психологія", "автобіографія"]
-//     },
-//     {
-//         title: "Пригоди Тома Сойєра",
-//         pages: 290,
-//         authors: ["Марк Твен"],
-//         genres: ["пригоди", "гумор", "дитяча література"]
-//     },
-//     {
-//         title: "Лісова пісня",
-//         pages: 180,
-//         authors: ["Леся Українка"],
-//         genres: ["драма-феєрія", "поезія", "українська класика"]
-//     }
-// ];
-//
-// writer(books);
-//
-// #59g0IsA
-//
-// – створити функцію, яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент
-//
-// let foobar = (text) => document.write(`<p>${text}</p>`)
-// foobar('Misha')
-//
-// #hOL6126
-//
-// – створити функцію, яка створює ul з трьома елементами li та виводить його через document.write. Текст li задати через аргумент всім однаковий
-//
-// let solve = (text) => {
-//     document.write(`<ul>`)
-//     for (let i = 0; i < 3; i++) {
-//         document.write(`<li>${text}</li>`)
-//     }
-//     document.write(`</ul>`)
-// }
-// solve('Misha')
-//
-// #0Kxco1edSN
-//
-// – створити функцію, яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл) та виводить його через document.write
-//
-// let builds=(text, num)=> {
-//     document.write(`<ul>`)
-//     for (let i = 0; i < num; i++) {
-//         document.write(`<li>${text}</li>`)
-//     }
-//     document.write(`</ul>`)
-// }
-// builds('Misha', 5)
-//
-// #gEFoxMMO
-//
-// – створити функцію, яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write
-//
-// let writer = (arr) => {
-//     document.write(`<ul>`)
-//     for (let ar of arr) {
-//         document.write(`<li>${ar}</li>`)
-//     }
-//     document.write(`</ul>`)
-// }
-// let arrM = ['Maietskyi', 108, true, 'Okten', 266, false, 'JavaScript']
-// writer(arrM)
-//
-// #bovDJDTIjt
-//
-// – створити функцію, яка приймає масив об’єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об’єкту окремий блок.
-//
-// let solve = (array) => {
-//     for (let user of array) {
-//         document.write(`<p>${user.id} ${user.name} ${user.age}</p>`)
-//     }
-// }
-// let usersWithId = [
-//     {id: 1, name: 'vasya', age: 31, status: false},
-//     {id: 2, name: 'petya', age: 30, status: true},
-//     {id: 3, name: 'kolya', age: 29, status: true},
-//     {id: 4, name: 'olya', age: 28, status: false}
-// ];
-// solve(usersWithId)
-//
-//     #pghbnSB
-//
-// – створити функцію яка повертає найменьше число з масиву
-//
-// let min = (array) => {
-//     let numMin = array[0];
-//     for (let num of array) {
-//         if (num < numMin) {
-//             numMin = num;
-//         }
-//     }
-//     console.log(numMin);
-// }
-//
-// let arrNum = [21, 713, 672, 582, 942, 548, 19, 931, 185, 321, 32, 363, 632, 453, 258, 729, 277, 215, 690, 976];
-// min(arrNum);
-//
-// #EKRNVPM
-//
-// – створити функцію sum(arr), яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-//
-// let sum = (arr) => {
-//     let sum = 0;
-//     for (let i of arr) {
-//         sum += i
-//     }
-//     console.log(sum)
-// }
-//
-// sum([1, 2, 10])
-//
-// #kpsbSQCt2Lf
-//
-// – створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах
-//
-// Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
-//
-// let swap = (arr, index1, index2) => {
-//     ind = arr[index1];
-//     arr[index1] = arr[index2];
-//     arr[index2] = ind;
-//
-//     return arr;
-// }
-//
-// console.log(swap([11, 22, 33, 44], 0, 1));
-//
-// #mkGDenYnNjn.html
-//
-// Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
-//
-// Приклад exchange(10000,[{currency:’USD’,value:25},{currency:’EUR’,value:42}],’USD’) // => 400
-//
-// let exchange = (sumUAH, currencyValues, exchangeCurrency) => {
-//     for (let currencyValue of currencyValues) {
-//         if (currencyValue.currency === exchangeCurrency) {
-//             return sumUAH / currencyValue.value
-//         }
-//     }
-// }
-//
-// let value = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD')
-// console.log(value)
-
-// let exchange = (sumUAH, currencyValues, exchangeCurrency) => {
-//     for (let i = 0; i < currencyValues.length; i++) {
-//         if (currencyValues[i].currency === exchangeCurrency) {
-//             return sumUAH / currencyValues[i].value
-//         }
-//     }
-// }
-//
-// let value = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD')
-// let value2 = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'EUR')
-//
-// console.log(value)
-// console.log(value2)
