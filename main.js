@@ -16,7 +16,7 @@
 // console.log(`lorem ipsum`.length);
 //
 // ‘javascript is cool’
-// console.log(`hello world`.length);
+// console.log(`javascript is cool`.length);
 //
 //
 //
@@ -26,7 +26,10 @@
 //
 //       ‘hello world’, ‘lorem ipsum’, ‘javascript is cool’
 //
-//
+// console.log(`hello world`.toUpperCase());
+// console.log(`lorem ipsum`.toUpperCase());
+// console.log(`javascript is cool`.toUpperCase());
+
 //
 // #ClDsAm7xba7
 //
@@ -34,15 +37,18 @@
 //
 //       ‘HELLO WORLD’, ‘LOREM IPSUM’, ‘JAVASCRIPT IS COOL’
 //
-//
+// console.log(`HELLO WORLD`.toLowerCase());
+// console.log(`LOREM IPSUM`.toLowerCase());
+// console.log(`JAVASCRIPT IS COOL`.toLowerCase());
 //
 // #0b89BkYZwu
 //
 // – Є “брудна” стрінга let str = ‘ dirty string   ‘ . Почистити її від зайвих пробілів.
 //
-//
-//
-//
+// let str = ` dirty string   `
+// let mix = str.trim()
+// console.log(str.length)
+// console.log(mix.length)
 //
 //     #bfoJuse4ZzP
 //
