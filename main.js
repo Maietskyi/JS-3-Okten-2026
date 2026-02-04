@@ -130,37 +130,32 @@
 //
 // – є масив
 //
-// let coursesAndDurationArray = [
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
 //
-//     {title: ‘JavaScript Complex’, monthDuration: 5},
+// let course = coursesAndDurationArray.sort((a, b) => a.monthDuration - b.monthDuration)
+//     .filter(value => value.monthDuration > 5)
+//     .map((value, index) => ({id: index + 1, ...value}));
 //
-// {title: ‘Java Complex’, monthDuration: 6},
+// console.log(course);
+
+// let course = coursesAndDurationArray.sort((a, b) => a.monthDuration - b.monthDuration)
+//     .filter(value => value.monthDuration > 5)
+//     .map((value, index) => ({id: index, ...value}));
 //
-// {title: ‘Python Complex’, monthDuration: 6},
-//
-// {title: ‘QA Complex’, monthDuration: 4},
-//
-// {title: ‘FullStack’, monthDuration: 7},
-//
-// {title: ‘Frontend’, monthDuration: 4}
-//
-// ];
+// console.log(course);
 //
 //  — відсортувати його за спаданням за monthDuration
 //
 //  — відфільтрувати, залишивши тільки курси з тривалістю понад 5 місяців
 //
 //  — за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 // #4LJn7zBx
 //
