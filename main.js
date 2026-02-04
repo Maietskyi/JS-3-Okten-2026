@@ -58,9 +58,20 @@
 //
 // let arr = stringToarray(str); [‘Ревуть’, ‘воли’, ‘як’, ‘ясла’, ‘повні’]
 //
+// let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+// let str = `Ревуть воли як ясла повні`;
 //
+// function stringToarray(arr) {
+//     return arr.split(' ');
+// }
 //
+// console.log(stringToarray(str));
 //
+// let str = `Ревуть воли як ясла повні`;
+//
+// let stringToarray = (arr) => arr.split(' ');
+//
+// console.log(stringToarray(str));
 //
 // #Rbr5kEQ
 //
