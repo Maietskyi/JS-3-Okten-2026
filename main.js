@@ -196,52 +196,83 @@
 //
 // описати колоду карт (від 6 до туза без джокерів). Більшу частину колоди можна описати з використанням циклу
 //
+let suits = ['spade', 'club', 'diamond', 'heart'];
+let values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
+
+let cards = [];
+for (let suit of suits) {
+    for (let value of values) {
+        card = {suit: suit, value: value};
+        if (suit === 'spade' || suit === 'club') {
+            card.color = 'black'
+        } else if (suit === 'diamond' || suit === 'heart') {
+            card.color = 'red'
+        }
+        cards.push(card);
+    }
+}
+console.log(cards)
+//
 // Після опису, використовуючи функції масивів:
 //
 //     – знайти піковий туз
+// console.log(cards.find(card => card.suit === 'spade' && card.value === 'ace'));
 //
 //  – всі шістки
+// console.log(cards.filter(card => card.value === '6'));
 //
 //  – всі червоні карти
+// console.log(cards.filter(value => value.color === 'red'));
 //
 //  – всі буби
+// console.log(cards.filter(value => value.suit === 'diamond'));
 //
 //  – всі трефи від 9 та більше
-//
-//
+// console.log(cards.filter(value => value.suit === 'club' && value.value !== '6' && value.value !== '7' && value.value !== '8' && value.value !== '9'));
 //
 // Приклад моделі об’єкту карти:
 //
 // {
-//
 //     cardSuit: ”, // ‘spade’, ‘diamond’,’heart’, ‘clubs’
-//
 //     value: ”, // ‘6’-’10’, ‘ace’,’jack’,’queen’,’king’
-//
 //     color:”, // ‘red’,’black’
-//
 // }
-//
-//
-//
-//
-//
-//
 //
 // #EP5I1UUzAX
 //
 // Взяти описану колоду карт, та за допомогою reduce “упакувати” всі карти по “мастях” в об’єкт
 //
+// let reduser = cards.reduce((acc, card) => {
+//
+//     switch (card.suit) {
+//         case 'spade':
+//             acc.spades.push(card);
+//             break;
+//         case 'diamond':
+//             acc.diamonds.push(card);
+//             break;
+//         case 'heart':
+//             acc.hearts.push(card);
+//             break;
+//         case 'club':
+//             acc.clubs.push(card);
+//             break;
+//     }
+//
+//     return acc;
+// }, {
+//     spades: [],
+//     diamonds: [],
+//     hearts: [],
+//     clubs: []
+// })
+// console.log(reduser)
+//
 // Приклад моделі кінцевого об’єкту
 //
 // {
-//
 //     spades:[],
-//
-//         diamonds:[],
-//
+//     diamonds:[],
 //     hearts:[],
-//
 //     clubs:[]
-//
 // }
