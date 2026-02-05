@@ -352,19 +352,45 @@ let coursesAndDurationArray = [
 //
 // описати колоду карт (від 6 до туза без джокерів). Більшу частину колоди можна описати з використанням циклу
 //
+const suits = ['spade', 'club', 'diamond', 'heart'];
+const values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+
+const cards = [];
+let cardsMaket = (suitArray, valueArray) => {
+    for (let suit of suitArray) {
+        for (let value of valueArray) {
+            const card = {suit: suit, value: value};
+            if (suit === 'spade' || suit === 'club') {
+                card.color = 'black'
+            } else if (suit === 'diamond' || suit === 'heart') {
+                card.color = 'red'
+            }
+            cards.push(card);
+        }
+    }
+    return cards;
+}
+
+cardsMaket(suits, values);
+console.log(cards)
+//
 // Після опису, використовуючи функції масивів:
 //
 //     – знайти піковий туз
+console.log(cards.find(value => value.suit === 'spade' || value.value === 'ace'));
 //
 //  – всі шістки
+console.log(cards.filter(value => value.value === '6'));
 //
 //  – всі червоні карти
+console.log(cards.filter(value => value.color === 'red'));
 //
 //  – всі буби
+console.log(cards.filter(value => value.suit === 'diamond'));
 //
 //  – всі трефи від 9 та більше
-//
-//
+// console.log(cards.filter(value => (value.suit === 'club' && (value.value === '9' || value.value === '10' || value.value === 'jack' || value.value === 'queen' || value.value === 'king' || value.value === 'ace')))
+console.log(cards.filter(value => value.suit === 'club' && value.value !== '6' && value.value !== '7' && value.value !== '8'))
 //
 // Приклад моделі об’єкту карти:
 //
