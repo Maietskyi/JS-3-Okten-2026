@@ -352,45 +352,44 @@ let coursesAndDurationArray = [
 //
 // описати колоду карт (від 6 до туза без джокерів). Більшу частину колоди можна описати з використанням циклу
 //
-const suits = ['spade', 'club', 'diamond', 'heart'];
-const values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
-
-const cards = [];
-let cardsMaket = (suitArray, valueArray) => {
-    for (let suit of suitArray) {
-        for (let value of valueArray) {
-            const card = {suit: suit, value: value};
-            if (suit === 'spade' || suit === 'club') {
-                card.color = 'black'
-            } else if (suit === 'diamond' || suit === 'heart') {
-                card.color = 'red'
-            }
-            cards.push(card);
-        }
-    }
-    return cards;
-}
-
-cardsMaket(suits, values);
-console.log(cards)
+// const suits = ['spade', 'club', 'diamond', 'heart'];
+// const values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+//
+// const cards = [];
+// let cardsMaket = (suitArray, valueArray) => {
+//     for (let suit of suitArray) {
+//         for (let value of valueArray) {
+//             const card = {suit: suit, value: value};
+//             if (suit === 'spade' || suit === 'club') {
+//                 card.color = 'black'
+//             } else if (suit === 'diamond' || suit === 'heart') {
+//                 card.color = 'red'
+//             }
+//             cards.push(card);
+//         }
+//     }
+//     return cards;
+// }
+//
+// cardsMaket(suits, values);
+// console.log(cards)
 //
 // Після опису, використовуючи функції масивів:
 //
 //     – знайти піковий туз
-console.log(cards.find(value => value.suit === 'spade' || value.value === 'ace'));
+// console.log(cards.find(value => value.suit === 'spade' || value.value === 'ace'));
 //
 //  – всі шістки
-console.log(cards.filter(value => value.value === '6'));
+// console.log(cards.filter(value => value.value === '6'));
 //
 //  – всі червоні карти
-console.log(cards.filter(value => value.color === 'red'));
+// console.log(cards.filter(value => value.color === 'red'));
 //
 //  – всі буби
-console.log(cards.filter(value => value.suit === 'diamond'));
+// console.log(cards.filter(value => value.suit === 'diamond'));
 //
 //  – всі трефи від 9 та більше
-// console.log(cards.filter(value => (value.suit === 'club' && (value.value === '9' || value.value === '10' || value.value === 'jack' || value.value === 'queen' || value.value === 'king' || value.value === 'ace')))
-console.log(cards.filter(value => value.suit === 'club' && value.value !== '6' && value.value !== '7' && value.value !== '8'))
+// console.log(cards.filter(value => value.suit === 'club' && value.value !== '6' && value.value !== '7' && value.value !== '8'))
 //
 // Приклад моделі об’єкту карти:
 //
@@ -404,26 +403,60 @@ console.log(cards.filter(value => value.suit === 'club' && value.value !== '6' &
 //
 // }
 //
-//
-//
-//
-//
-//
-//
 // #EP5I1UUzAX
 //
 // Взяти описану колоду карт, та за допомогою reduce “упакувати” всі карти по “мастях” в об’єкт
+// const suits = ['spade', 'club', 'diamond', 'heart'];
+// const values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+//
+// const cards = [];
+// let cardsMaket = (suitArray, valueArray) => {
+//     for (let suit of suitArray) {
+//         for (let value of valueArray) {
+//             const card = {suit: suit, value: value};
+//             if (suit === 'spade' || suit === 'club') {
+//                 card.color = 'black'
+//             } else if (suit === 'diamond' || suit === 'heart') {
+//                 card.color = 'red'
+//             }
+//             cards.push(card);
+//         }
+//     }
+//     return cards;
+// }
+//
+// cardsMaket(suits, values);
+// console.log(cards)
 //
 // Приклад моделі кінцевого об’єкту
 //
 // {
-//
 //     spades:[],
-//
-//         diamonds:[],
-//
+//     diamonds:[],
 //     hearts:[],
-//
 //     clubs:[]
-//
 // }
+// let reducer = cards.reduce((acc, card) => {
+//     switch (card.suit) {
+//         case 'spade':
+//             acc.spades.push(card);
+//             break;
+//         case 'diamond':
+//             acc.diamonds.push(card);
+//             break;
+//         case 'heart':
+//             acc.hearts.push(card);
+//             break;
+//         case 'club':
+//             acc.clubs.push(card);
+//             break;
+//     }
+//     return acc;
+// }, {
+//     spades: [],
+//     diamonds: [],
+//     hearts: [],
+//     clubs: []
+// })
+//
+// console.log(reducer)
