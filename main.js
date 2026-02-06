@@ -1,278 +1,325 @@
-// JS. ДЗ 6
+// JS. ДЗ 7
 // Коди з лекцій та коди з ДЗ
 //
 // https://github.com/OktenSchool/javascript.git
 //
-//     #dFeorS3m7u
 //
-// – Знайти та вивести довжину наступних стрінгових значень
 //
-//  ‘hello world’
-// console.log('hello world'.length)
+//     #XjJuucOMR0
 //
-// ‘lorem ipsum’
+// – Створити функцію конструктор для об’єктів User з полями id, name, surname , email, phone
 //
-// ‘javascript is cool’
-// console.log('javascript is cool'.length)
+// function User(id, name, surname, email, phone) {
+//     this.id = id;
+//     this.name = name;
+//     this.surname = surname;
+//     this.email = email;
+//     this.phone = phone;
+// }
+
 //
-// #8lld9HMxXWB
+// створити пустий масив, наповнити його 10 об’єктами new User(….)
 //
-// – Перевести до великого регістру наступні стрінгові значення
+// let users = [
+//     new User(1, 'Misha', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 37'),
+//     new User(2, 'Vika', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 38'),
+//     new User(3, 'Roma', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 39'),
+//     new User(4, 'Daria', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 40'),
+//     new User(5, 'Vasyl', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 41'),
+//     new User(6, 'Maria', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 42'),
+//     new User(7, 'Anna', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 43'),
+//     new User(8, 'Andriy', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 44'),
+//     new User(9, 'Vitalik', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 45'),
+//     new User(10, 'Ivan', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 46')
+// ]
 //
-//       ‘hello world’, ‘lorem ipsum’, ‘javascript is cool’
+// console.log(users)
 //
-// console.log('hello world'.toUpperCase());
-// console.log('lorem ipsum'.toUpperCase());
-// console.log('javascript is cool'.toUpperCase());
+// #2ikXsE2WiKZ
 //
-// #ClDsAm7xba7
+// – Взяти масив з  User[] з попереднього завдання, та відфільтрувати, залишивши тільки об’єкти з парними id (filter)
 //
-// – Перевести до нижнього регістру наступні стрінгові значення
+// console.log(users.filter(value => value.id % 2 === 0));
 //
-//       ‘HELLO WORLD’, ‘LOREM IPSUM’, ‘JAVASCRIPT IS COOL’
+// #pOeHKct
 //
-// console.log('HELLO WORLD'.toLowerCase());
-// console.log('LOREM IPSUM'.toLowerCase());
-// console.log('JAVASCRIPT IS COOL'.toLowerCase());
+// – Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
 //
-// #0b89BkYZwu
+// console.log(users.sort((a, b) => b.id - a.id));
+// console.log(users.sort((a, b) => a.id - b.id));
 //
-// – Є “брудна” стрінга let str = ‘ dirty string   ‘ . Почистити її від зайвих пробілів.
+// #nkMXISv
 //
-// let str = ' dirty string   '
-// let srtM = str.trim(' ')
-// console.log(str.length);
-// console.log(srtM.length);
+// – створити конструктор для об’єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
 //
-//     #bfoJuse4ZzP
+// створити пустий масив, наповнити його 10 об’єктами Client
 //
-// – Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+// function Product(title, price) {
+//     this.title = title;
+//     this.price = price;
+// }
 //
-//     let str = ‘Ревуть воли як ясла повні’;
+// function Client(id, name, surname, email, phone, ...products) {
+//     this.id = id;
+//     this.name = name;
+//     this.surname = surname;
+//     this.email = email;
+//     this.phone = phone;
+//     this.order = products;
+// }
 //
-// let arr = stringToarray(str); [‘Ревуть’, ‘воли’, ‘як’, ‘ясла’, ‘повні’]
+// let clients = [
+//     new Client(1, 'Misha', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 37',
+//         new Product('tv', 546), new Product('phone', 849)),
+//     new Client(2, 'Vika', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 38',
+//         new Product('email', 849), new Product('phone', 849), new Product('iphone', 849)),
+//     new Client(3, 'Roma', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 39',
+//         new Product('iphone', 849)),
+//     new Client(4, 'Daria', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 40',
+//         new Product('iphone', 849), new Product('iphone', 849)),
+//     new Client(5, 'Vasyl', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 41'),
+//     new Client(6, 'Maria', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 42',
+//         new Product('keyboard', '325')),
+//     new Client(7, 'Anna', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 43',
+//         new Product('email', 849), new Product('phone', 849), new Product('iphone', 849), new Product('iphone', 849)),
+//     new Client(8, 'Andriy', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 44',
+//         new Product('tv', 546), new Product('phone', 849), new Product('iphone', 849)),
+//     new Client(9, 'Vitalik', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 45',
+//         new Product('tv', 546)),
+//     new Client(10, 'Ivan', 'Maietskyi', 'mmaietskyi@gmail.com', '067 674 07 46',
+//         new Product('keyboard', '325'))
+// ]
 //
-// let str = 'Ревуть воли як ясла повні';
-// let stringToarray = (str) => str.split(' ')
-// console.log(stringToarray(str));
+// console.log(clients)
 //
-// #Rbr5kEQ
+// #8abtVjRv
 //
-// – є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об’єкти в масиві на стрінгові.
+// – Взяти масив (Client [] з попереднього завдання). Відсортувати його за кількістю товарів в полі order по зростанню. (sort)
 //
-// let num = [10, 8, -7, 55, 987, -1011, 0, 1050, 0]
-// console.log(num.map(value => value.toString()));
+// console.log(clients.sort((a, b) => a.order.length - b.order.length));
 //
-// #5hqyKTfmc
+// #vV9a6584I5
 //
-// – створити функцію sortNums(array,direction), яка приймає масив чисел, та сортує його від більшого до меншого, або навпаки  – залежно від значення аргументу direction.
+// – Створити функцію конструктор, яка дозволяє створювати об’єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об’єм двигуна. додати в об’єкт функції:
 //
-// let nums = [11, 21, 3];
-// //
-// let sortNums = (array, direction) => {
-//     if (direction === 'ascending') {
-//         array.sort((a, b) => a - b);
-//     } else if (direction === 'descending') {
-//         array.sort((a, b) => b - a);
+//     — drive () – яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+//
+//     — info () – яка виводить всю інформацію про автомобіль в форматі `назва поля – значення поля`
+//
+//     — increaseMaxSpeed (newSpeed) – яка підвищує значення максимальної швидкості на значення newSpeed
+//
+//     — changeYear (newValue) – змінює рік випуску на значення newValue
+//
+//     — addDriver (driver) – приймає об’єкт який “водій” з довільним набором полів, і додає його в поточний об’єкт car
+//
+// function Car(model, producer, year, maxSpeed, engineDisplacement) {
+//     this.model = model;
+//     this.producer = producer;
+//     this.year = year;
+//     this.maxSpeed = maxSpeed;
+//     this.engineDisplacement = engineDisplacement;
+//     this.drive = function () {
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+//     };
+//     this.info = function () {
+//         for (let key in this) {
+//             console.log(key, this[key]);
+//         }
+//     }
+//     this.increaseMaxSpeed = function (newSpeed) {
+//         if (newSpeed > 0) {
+//             this.maxSpeed = newSpeed + maxSpeed;
+//         }
+//     }
+//     this.changeYear = function (newValue) {
+//         if (newValue > 1900) {
+//             this.year = newValue;
+//         }
+//     }
+//     this.drivers = function (driver) {
+//         this.driver = driver;
+//     }
+// }
+//
+// let car1 = new Car('Passat', 'Volkswagen', 2011, 210, 1600)
+// console.log(car1);
+// car1.drive()
+// car1.info()
+// car1.increaseMaxSpeed(20)
+// console.log(car1);
+// car1.changeYear(2020)
+// console.log(car1)
+// car1.drivers({name: 'Misha', year: 26})
+//
+// #5kla3yMpgp
+//
+// – (Те саме, тільки через клас)
+//
+// Створити клас, який дозволяє створювати об’єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об’єм двигуна. додати в об’єкт функції:
+//
+//     — drive () – яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+//
+//     — info () – яка виводить всю інформацію про автомобіль в форматі `назва поля – значення поля`
+//
+//     — increaseMaxSpeed (newSpeed) – яка підвищує значення максимальної швидкості на значення newSpeed
+//
+//     — changeYear (newValue) – змінює рік випуску на значення newValue
+//
+//     — addDriver (driver) – приймає об’єкт, який “водій” з довільним набором полів, і додає його в поточний об’єкт car
+//
+// class Car {
+//
+//     constructor(model, producer, year, maxSpeed, engineDisplacement) {
+//         this.model = model;
+//         this.producer = producer;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.engineDisplacement = engineDisplacement;
+//     }
+//
+//     drive() {
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+//     };
+//
+//     info() {
+//         for (let key in this) {
+//             console.log(key, this[key]);
+//         }
+//     }
+//
+//     increaseMaxSpeed(newSpeed) {
+//         if (newSpeed > 0) {
+//             this.maxSpeed += newSpeed;
+//         }
+//     }
+//
+//     changeYear(newValue) {
+//         if (newValue > 1900) {
+//             this.year = newValue;
+//         }
+//     }
+//
+//     drivers(driver) {
+//         this.driver = driver;
+//     }
+// }
+
+// let car2 = new Car('Passat', 'Volkswagen', 2011, 210, 1600)
+// console.log(car2);
+// car2.drive()
+// car2.info()
+// car2.increaseMaxSpeed(20)
+// console.log(car2);
+// car2.changeYear(2020)
+// console.log(car2)
+// car2.drivers({name: 'Misha', year: 26})
+//
+// #zg6Fifnqig
+//
+// – створити клас/функцію конструктор попелюшка з полями ім’я, вік, розмір ноги. Створити масив з 10 попелюшок.
+//
+// function Cinderella(name, age, footSize) {
+//     this.name = name;
+//     this.age = age;
+//     this.footSize = footSize;
+// }
+//
+// let cinderellas = [
+//     new Cinderella('Anna', 18, 35),
+//     new Cinderella('Vika', 19, 36),
+//     new Cinderella('Maria', 20, 37),
+//     new Cinderella('Sofia', 21, 38),
+//     new Cinderella('Ira', 22, 39),
+//     new Cinderella('Ola', 23, 38),
+//     new Cinderella('Daria', 24, 39),
+//     new Cinderella('Vika', 23, 38),
+//     new Cinderella('Maria', 25, 39),
+//     new Cinderella('Lilia', 22, 38)
+// ]
+// console.log(cinderellas);
+//
+//     Створити об’єкт класу “принц” за допомоги класу який має поля ім’я, вік, туфелька яку він знайшов.
+// class Prince {
+//     constructor(name, age, shoeSize) {
+//         this.name = name;
+//         this.age = age;
+//         this.shoeSize = shoeSize;
+//     }
+// }
+//
+// let princeM = new Prince('Misha', 26, 36);
+// console.log((princeM));
+//
+//     За допомоги циклу знайти, яка попелюшка повинна бути з принцом.
+// for (let item of cinderellas) {
+//     if (item.footSize === princeM.shoeSize) {
+//         console.log(item);
+//         princeM.wife = item;
+//     }
+// }
+// console.log(princeM);
+//
+// ! Додатково, знайти необхідну попелюшку за допомогою функції масиву find та відповідного колбеку
+// let finde = cinderellas.find(cinderella => cinderella.footSize === princeM.shoeSize);
+// princeM.wife = finde;
+// console.log(princeM);
+//
+// #gsKLAsNWM
+//
+// *Через Array.prototype. створити власний foreach, filter
+
+// Array.prototype.myForEach = function (callback) {
+//     const yourArray = this;
+//     for (const item of yourArray) {
+//         callback(item);
+//     }
+// };
+//
+// [11, 22, 33].myForEach((x) => console.log(x));
+// Array.prototype.myForEach = function(callback) {
+//     const yourArray = this;
+//     for (const item of yourArray) {
+//         callback(item);
+//     }
+// };
+// [11, 22, 33].myForEach((x) => console.log(x));
+
+
+// Array.prototype.myFilter = function (predicate) {
+//     const arr = [];
+//     for (const item of this) {
+//         if (predicate(item)) {
+//             arr.push(item);
+//         }
+//     }
+//
+//     return arr;
+// };
+//
+// Array.prototype.myFilter = function(predicate) {
+//     const array = [];
+//     for (const i of this) {
+//         if (predicate(i)) {
+//             array.push(i);
+//         }
 //     }
 //     return array;
-// }
-// console.log(sortNums(nums, 'ascending')); // [3,11,21]
+// };
 //
-// console.log(sortNums(nums, 'descending')); // [21,11,3]
-//
-// ==========================
-//
-// #yo06d74c1C
-//
-// – є масив
-//
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
+// let users = [
+//     {name: 'vasya', age: 31, status: false},
+//     {name: 'petya', age: 30, status: true},
+//     {name: 'kolya', age: 29, status: true},
+//     {name: 'olya', age: 28, status: false},
+//     {name: 'max', age: 30, status: true},
+//     {name: 'anya', age: 31, status: false},
+//     {name: 'oleg', age: 28, status: false},
+//     {name: 'andrey', age: 29, status: true},
+//     {name: 'masha', age: 30, status: true},
+//     {name: 'olya', age: 31, status: false},
+//     {name: 'max', age: 31, status: true}
 // ];
 //
-//  — відсортувати його за спаданням за monthDuration
-// console.log(coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration));
+// const result = users.myFilter((user) => user.status);
 //
-//  — відфільтрувати, залишивши тільки курси з тривалістю понад 5 місяців
-// console.log(coursesAndDurationArray.filter(value => value.monthDuration > 5));
-//
-//  — за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
-// console.log(coursesAndDurationArray.map((value, index) => ({id: index + 1, ...value})));
-//
-// let course = coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration)
-//     .filter(value => value.monthDuration > 5)
-//     .map((value, index) => ({id: index + 1, ...value}));
-// console.log(course)
-//
-// #4LJn7zBx
-//
-// взяти з arrays.js масив coursesArray
-// let coursesArray = [
-//     {
-//         title: 'JavaScript Complex',
-//         monthDuration: 5,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-//     },
-//     {
-//         title: 'Java Complex',
-//         monthDuration: 6,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'git',
-//             'java core',
-//             'java advanced']
-//     },
-//     {
-//         title: 'Python Complex',
-//         monthDuration: 6,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'python core',
-//             'python advanced']
-//     },
-//     {
-//         title: 'QA Complex',
-//         monthDuration: 4,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-//     },
-//     {
-//         title: 'FullStack',
-//         monthDuration: 7,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'react',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'git',
-//             'node.js',
-//             'python',
-//             'java']
-//     },
-//     {
-//         title: 'Frontend',
-//         monthDuration: 4,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-//     }
-// ];
-//
-// –написати пошук всіх об’єктів, в яких в modules є sass
-// let course = (array) => array.filter(value => value.modules.includes('sass'));
-// console.log(course(coursesArray));
-//
-// –написати пошук всіх об’єктів, в яких в modules є docker
-//
-// let cours = (array) => array.filter(item => item.modules.includes('docker'));
-// console.log(cours(coursesArray));
-//
-// #bolvdlhP
-//
-// описати колоду карт (від 6 до туза без джокерів). Більшу частину колоди можна описати з використанням циклу
-//
-let suits = ['spade', 'club', 'diamond', 'heart'];
-let values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
-
-let cards = [];
-for (let suit of suits) {
-    for (let value of values) {
-        card = {suit: suit, value: value};
-        if (suit === 'spade' || suit === 'club') {
-            card.color = 'black'
-        } else if (suit === 'diamond' || suit === 'heart') {
-            card.color = 'red'
-        }
-        cards.push(card);
-    }
-}
-console.log(cards)
-//
-// Після опису, використовуючи функції масивів:
-//
-//     – знайти піковий туз
-// console.log(cards.find(card => card.suit === 'spade' && card.value === 'ace'));
-//
-//  – всі шістки
-// console.log(cards.filter(card => card.value === '6'));
-//
-//  – всі червоні карти
-// console.log(cards.filter(value => value.color === 'red'));
-//
-//  – всі буби
-// console.log(cards.filter(value => value.suit === 'diamond'));
-//
-//  – всі трефи від 9 та більше
-// console.log(cards.filter(value => value.suit === 'club' && value.value !== '6' && value.value !== '7' && value.value !== '8' && value.value !== '9'));
-//
-// Приклад моделі об’єкту карти:
-//
-// {
-//     cardSuit: ”, // ‘spade’, ‘diamond’,’heart’, ‘clubs’
-//     value: ”, // ‘6’-’10’, ‘ace’,’jack’,’queen’,’king’
-//     color:”, // ‘red’,’black’
-// }
-//
-// #EP5I1UUzAX
-//
-// Взяти описану колоду карт, та за допомогою reduce “упакувати” всі карти по “мастях” в об’єкт
-//
-// let reduser = cards.reduce((acc, card) => {
-//
-//     switch (card.suit) {
-//         case 'spade':
-//             acc.spades.push(card);
-//             break;
-//         case 'diamond':
-//             acc.diamonds.push(card);
-//             break;
-//         case 'heart':
-//             acc.hearts.push(card);
-//             break;
-//         case 'club':
-//             acc.clubs.push(card);
-//             break;
-//     }
-//
-//     return acc;
-// }, {
-//     spades: [],
-//     diamonds: [],
-//     hearts: [],
-//     clubs: []
-// })
-// console.log(reduser)
-//
-// Приклад моделі кінцевого об’єкту
-//
-// {
-//     spades:[],
-//     diamonds:[],
-//     hearts:[],
-//     clubs:[]
-// }
+// console.log(result);
