@@ -43,6 +43,26 @@
 //
 // function copiObj(obj) {
 //     if (obj) {
+//         let functions = [];
+//         for (let key in obj) {
+//             if (typeof obj[key] === "function") {
+//                 copiFunction = obj[key].bind({});
+//                 functions.push({copiFunction, key});
+//             }
+//         }
+//         clonObj = JSON.parse(JSON.stringify(obj));
+//         for (const func of functions) {
+//             clonObj[func.key] = func.copiFunction;
+//         }
+//         return clonObj;
+//     }
+//     throw new Error(`Помилка об'єкту`)
+// }
+//
+// console.log(copiObj(obj));
+//
+// function copiObj(obj) {
+//     if (obj) {
 //         let functions = []
 //         for (const key in obj) {
 //             console.log(typeof obj[key]);
