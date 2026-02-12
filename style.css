@@ -1,47 +1,102 @@
-.wrap {
-    /*background-color: red;*/
-    /*color: white;*/
-    width: 400px;
-    height: 400px;
-}
+/*.wrap {*/
+/*    !*background-color: red;*!*/
+/*    !*color: white;*!*/
+/*    width: 400px;*/
+/*    height: 400px;*/
+/*}*/
 
-.collapse {
-    /*background-color: blue;*/
-    /*color: silver;*/
+/*.collapse {*/
+/*    !*background-color: blue;*!*/
+/*    !*color: silver;*!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+
+/*}*/
+
+/*.alpha {*/
+/*    !*background-color: green;*!*/
+/*    color: blueviolet;*/
+/*}*/
+
+/*.beta {*/
+/*    background-color: orange;*/
+/*    !*color: black;*!*/
+/*}*/
+
+/*.container{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/* Загальний стиль сторінки */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-
+    gap: 30px;
 }
 
-.alpha {
-    /*background-color: green;*/
-    color: blueviolet;
+/* Контейнер картки */
+.container {
+    width: 320px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
 }
 
-.beta {
-    background-color: orange;
-    /*color: black;*/
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 }
 
-.container{
+/* Заголовок */
+.class-h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Блок тривалості */
+.container > div {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
-.divUpp{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+.class-h3 {
+    font-size: 14px;
+    background: #f3f4f6;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #444;
 }
 
-.divAp, .divEp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(138, 43, 226, 0.76);
-    padding: 20px;
+/* Список модулів */
+ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+ul::before {
+    content: "Modules:";
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #333;
 }
