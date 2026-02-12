@@ -1,13 +1,50 @@
-// JS. ДЗ 8
+// JS. ДЗ 9
 // Коди з лекцій та коди з ДЗ
 //
 // https://github.com/OktenSchool/javascript.git
 //
 //
 //
-//     #iz6emEsP2BA
+//     #8Nmt60ZT
 //
-// – є масив
+// – створити блок,
+const div1 = document.createElement("div");
+//
+// – додати йому класи wrap, collapse, alpha, beta
+// div1.classList.add("wrap");
+// div1.classList.add("collapse");
+// div1.classList.add("alpha");
+// div1.classList.add("beta");
+//
+// – додати стилі (довільні значення) : колір фону, колір тексту, розмір тексту
+// div1.textContent = 'Hello World!';
+//  в css
+// – додати цей блок в body.
+// document.body.appendChild(div1);
+//
+// – клонувати його повністю, та додати клон в body.
+//
+// const div2 = div1.cloneNode(true);
+// document.body.appendChild(div2);
+//
+//     #OPLI89c9G
+//
+// – Є масив:
+//
+// let arr = ['Main', 'Products', 'About us', 'Contacts']
+//
+// Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
+// const cont = document.createElement("ul");
+// for (let ar of arr) {
+//     let li1 = document.createElement('li');
+//     li1.textContent = ar;
+//     cont.appendChild(li1);
+// }
+// document.body.appendChild(cont);
+//
+// #jeBqHV525U5
+//
+// – Є масив
 //
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -17,68 +54,58 @@
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-// console.log(coursesAndDurationArray.map((value, index) => ({id: index + 1, ...value})));
 //
-// за допомогою map перетворити кожен елемент на наступний тип {id,title,monthDuration
+// Для кожного елементу масиву зробити блок, в якому вивести інформацію про title та monthDuration
 //
-//     Зробити все ВИКЛЮЧНО за допомогою інлайн конструкції
+// Завдання робити через цикли.
 //
-//     #AiN5CoUQ
+// let container = document.createElement('div');
+// for (let item of coursesAndDurationArray) {
+//     let list = document.createElement('div');
+//     list.textContent = `Title: ${item.title}`;
+//     let list2 = document.createElement('p');
+//     list2.textContent = `Month Duration: ${item.monthDuration}`;
+//     container.append(list, list2);
+// }
+// document.body.appendChild(container);
 //
-//     Створити функцію, яка робить глибоку копію об’єкта.
+// =========================
 //
-//         Додати перевірки на undefined, null, NaN.
+//     #Kx1xgoKy8
 //
-//         Подумати і реалізувати логіку, в якій кінцевий об’єкт буде мати функції, які в нього були до цього моменту.
+// – Є масив
 //
-// let obj = {
-//     name: "John",
-//     password: 5463,
-//     email: "john@gmail.com",
-//     drive: function () {
-//     },
-//     drivers: function () {
-//     }
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+//
+// За допомоги скріпта для кожного елементу масиву зробити <div class=’item’> ,  в якому буде <h1 class=’heading’>  з title  елементу, та <p class=’description’> з monthDuration елементу.
+//
+//     Завдання робити через цикли.
+// for (let course of coursesAndDurationArray) {
+//     let item = document.createElement('div');
+//     item.classList.add('item');
+//     let heading = document.createElement('h1');
+//     heading.textContent = `Title: ${course.title}`;
+//     let description = document.createElement('p');
+//     description.textContent = `Month Duration: ${course.monthDuration}`;
+//     item.append(heading, description);
+//     document.body.appendChild(item);
 // }
 //
-// function copiObj(obj) {
-//     if (obj) {
-//         let functions = [];
-//         for (let key in obj) {
-//             if (typeof obj[key] === "function") {
-//                 copiFunction = obj[key].bind({});
-//                 functions.push({copiFunction, key});
-//             }
-//         }
-//         clonObj = JSON.parse(JSON.stringify(obj));
-//         for (const func of functions) {
-//             clonObj[func.key] = func.copiFunction;
-//         }
-//         return clonObj;
-//     }
-//     throw new Error(`Помилка об'єкту`)
-// }
+// =========
 //
-// console.log(copiObj(obj));
+// – Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
 //
-// function copiObj(obj) {
-//     if (obj) {
-//         let functions = []
-//         for (const key in obj) {
-//             console.log(typeof obj[key]);
-//             if (typeof obj[key] === "function") {
-//                 let functuinClone = obj[key].bind({});
-//                 functions.push({functuinClone, key});
-//             }
-//         }
-//         console.log(functions);
-//         let clonObj = JSON.parse(JSON.stringify(obj));
-//         for (const func of functions) {
-//             clonObj[func.key] = func.functuinClone;
-//         }
-//         return clonObj
-//     }
-//     throw new Error('!!!!!')
-// }
 //
-// console.log(copiObj(obj));
+//
+// Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
+//
+// Приклад структури знаходиться у файлі example.png, який лежить в папці з поточним файлом
+//
+//

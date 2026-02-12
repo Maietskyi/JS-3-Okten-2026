@@ -1,0 +1,47 @@
+.wrap {
+    /*background-color: red;*/
+    /*color: white;*/
+    width: 400px;
+    height: 400px;
+}
+
+.collapse {
+    /*background-color: blue;*/
+    /*color: silver;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.alpha {
+    /*background-color: green;*/
+    color: blueviolet;
+}
+
+.beta {
+    background-color: orange;
+    /*color: black;*/
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divUpp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.divAp, .divEp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(138, 43, 226, 0.76);
+    padding: 20px;
+}
