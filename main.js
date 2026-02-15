@@ -3,29 +3,61 @@
 //
 // https://github.com/OktenSchool/javascript.git
 //
-//
-//
 //     #sH8c4er
 //
 // – Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id=”text”.
 //
+// 1 Варіант
 //
+// let text = document.createElement("p");
+// text.id = "text";
+// text.innerText = 'При натисканні я зникну';
 //
+// let button = document.createElement('button');
+// button.id = 'butt';
+// button.innerText = 'Cовати';
 //
+// button.addEventListener('click', function () {
+//     let text = document.getElementById('text');
+//     text.style.display = 'none';
+// })
+//
+// document.body.append(button, text);
+
+// 2 Варіант
+// let button = document.getElementById("butt");
+// button.addEventListener('click', function () {
+//     // document.getElementById("text").style.display = "none";
+//     // document.getElementById('text').remove();
+//     // document.getElementById('text').innerText = '';
+// });
 //
 // #j693ca8
 //
 // – створити інпут, який приймає вік людини, та кнопку, яка підтверджує дію. При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік, чи менше він за 18, та повідомити про це користувача
 //
+// let myForm = document.getElementById("myForm");
+// myForm.addEventListener("submit", function (event) {
+//     event.preventDefault();
 //
+//     let age = +document.getElementById("age").value;
+//     if (!age) {
+//         text.innerText = "Будь ласка, введіть вік";
+//     } else if (age < 18) {
+//         let text = document.getElementById("text");
+//         text.innerText = `Вибачте, але Ваш вік менше 18 років`;
+//     } else if (age >= 18) {
+//         let text = document.getElementById("text");
+//         text.innerText = `Ласкаво прошу!`
+//     }
+//     document.getElementById("age").value = '';
+// })
 //
 // #ymAmN2xJ
 //
 // Створити форму з трьома полями для name, surname, age та кнопкою. При натисканні на кнопку зчитати дані з полів, та вивести об’єкт в документ. Іншими словами : заповнили форму, натиснули кнопку, під формою з’явився блок з вашим об’єктом
 //
-//
-//
-//
+
 //
 // #2VaLt4vDczH
 //
