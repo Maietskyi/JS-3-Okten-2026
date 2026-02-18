@@ -87,17 +87,21 @@
 //
 // Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховище, в масив sessionsList зберігається інформація про дату та час відвідування сторінки. Є  сторінка sessionsListPage.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а малювати в DOM
 //
-//
-//
-//
-//
-//
+// let sessionsList = JSON.parse(localStorage.getItem('sessionsList')) || [];
+// sessionsList.push(new Date());
+// console.log(sessionsList);
+// localStorage.setItem('sessionsList', JSON.stringify(sessionsList));
 //
 // #Jg0gPO00
 //
 // створити конвертор ваги з кг в фунти. дані заповнюються через інпут. При введенні даних обрахунок стається миттєво, без натискань додаткових кнопок
 //
-//
+// let elementKG = document.getElementById('kg');
+// let text = document.getElementById('text');
+// elementKG.addEventListener('input', function (e) {
+//     e.preventDefault();
+//     text.innerText = +this.value * 2.2;
+// })
 //
 // #RbQGnH5DuC
 //
