@@ -111,9 +111,28 @@
 //
 // addToLocalStorage(arrayName:string,objToAdd:any{}):void
 //
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+// localStorage.setItem('arrayKey', JSON.stringify(coursesAndDurationArray))
+
+// function addToLocalStorage(arrayName, objToAdd) {
+//     let jsonls = JSON.parse(localStorage.getItem(arrayName));
+//     if (!jsonls) {
+//         new Error(`Немає такого об'єкта в локал сторадж`)
+//     }
+//     if (typeof (jsonls) === 'object') {
+//         jsonls.push(objToAdd)
+//     }
+//     localStorage.setItem(arrayName, JSON.stringify(jsonls));
+// }
 //
-//
-//
+// addToLocalStorage('arrayKey', {})
 //
 //     #kUSgFqWY
 //
