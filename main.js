@@ -8,7 +8,7 @@
 //     #8Nmt60ZT
 //
 // – створити блок,
-const div1 = document.createElement("div");
+// const div1 = document.createElement("div");
 //
 // – додати йому класи wrap, collapse, alpha, beta
 // div1.classList.add("wrap");
