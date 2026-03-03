@@ -161,31 +161,31 @@
 //     }
 // })
 // document.body.appendChild(table);
-let tabelForm = document.forms['tabel1'];
-
-tabelForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    let num1 = +document.getElementById('num1').value;
-    let num2 = +document.getElementById('num2').value;
-    let text = document.getElementById('text').value;
-
-    let table = document.createElement("table");
-
-    for (let i = 0; i < num1; i++) {
-        let tr = document.createElement('tr');
-
-        for (let y = 0; y < num2; y++) {
-            let td = document.createElement('td');
-            td.innerText = text;
-            tr.append(td);
-        }
-
-        table.append(tr);
-    }
-
-    document.body.append(table);
-});
+// let tabelForm = document.forms['tabel1'];
+//
+// tabelForm.addEventListener('submit', function (e) {
+//     e.preventDefault();
+//
+//     let num1 = +document.getElementById('num1').value;
+//     let num2 = +document.getElementById('num2').value;
+//     let text = document.getElementById('text').value;
+//
+//     let table = document.createElement("table");
+//
+//     for (let i = 0; i < num1; i++) {
+//         let tr = document.createElement('tr');
+//
+//         for (let y = 0; y < num2; y++) {
+//             let td = document.createElement('td');
+//             td.innerText = text;
+//             tr.append(td);
+//         }
+//
+//         table.append(tr);
+//     }
+//
+//     document.body.append(table);
+// });
 //
 //     #bq1zkx7WP
 //
