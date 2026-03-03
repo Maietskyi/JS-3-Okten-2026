@@ -17,6 +17,7 @@
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
+// console.log(coursesAndDurationArray.map((value, index) => ({id: index + 1, title: value})));
 // console.log(coursesAndDurationArray.map((value, index) => ({id: index + 1, ...value})));
 //
 // за допомогою map перетворити кожен елемент на наступний тип {id,title,monthDuration
