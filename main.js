@@ -37,6 +37,21 @@
 //
 // Створити форму з трьома полями для name, surname, age та кнопкою. При натисканні на кнопку зчитати дані з полів, та вивести об’єкт в документ. Іншими словами : заповнили форму, натиснули кнопку, під формою з’явився блок з вашим об’єктом
 //
+// let myForm = document.forms.myForm;
+//
+// myForm.addEventListener('submit', (e) => {
+//     e.preventDefault()
+//
+//     let name = document.getElementById(`name`).value;
+//     let surname = document.getElementById(`surname`).value;
+//     let age = document.getElementById(`age`).value;
+//     let send = document.getElementById(`send`)
+//     let text = document.getElementById(`text`)
+//
+//     let user = {name, surname, age}
+//     text.innerText = `Name: ${user.name}, Surname: ${user.surname}, Age: ${user.age}`;
+//     // text.innerText = `Name: ${name.value}, Surname: ${surname.value}, Age: ${age.value}`;
+// })
 //
 // #2VaLt4vDczH
 //
