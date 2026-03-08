@@ -76,6 +76,20 @@
 //
 // створити конвертор ваги з кг в фунти. дані заповнюються через інпут. При введенні даних обрахунок стається миттєво, без натискань додаткових кнопок
 //
+// let kg = document.getElementById("kg");
+// let text = document.getElementById("text");
+// kg.addEventListener('input', (e) => {
+//     e.preventDefault();
+//     text.textContent = +kg.value * 2.2;
+// })
+
+// let kg = document.getElementById("kg");
+// let text = document.getElementById("text");
+// kg.oninput = function (en) {
+//     en.preventDefault();
+//     text.innerText = +this.value * 2.2;
+// }
+
 //
 // #RbQGnH5DuC
 //
