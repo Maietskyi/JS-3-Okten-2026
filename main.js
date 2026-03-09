@@ -97,7 +97,7 @@
 //
 // сигнатура функції –
 //
-// addToLocalStorage(arrayName:string,objToAdd:any{}):void
+// addToLocalStorage(arrayName,objToAdd)
 //
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -108,7 +108,19 @@
 //     {title: 'Frontend', monthDuration: 4}
 // ];
 // localStorage.setItem('arrayKey', JSON.stringify(coursesAndDurationArray))
-
+//
+// function addToLocalStorage(arrayName, objToAdd) {
+//     let jsonls = JSON.parse(localStorage.getItem(arrayName));
+//     if (!jsonls) {
+//         new Error(`Немає такого об'єкта в локал сторадж`)
+//     }
+//     if (typeof (jsonls) === 'object') {
+//         jsonls.push(objToAdd)
+//     }
+//     localStorage.setItem(arrayName, JSON.stringify(jsonls));
+// }
+//
+// addToLocalStorage('arrayKey', {})
 //
 //     #kUSgFqWY
 //
