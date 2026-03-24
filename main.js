@@ -168,8 +168,46 @@
 //
 //     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд, нічого не відбувається
 //
+// let value = document.getElementById('value')
+//
+// let pageView = [];
+// // якщо такі сесії вже були - і є записи в localStorage
+// if (localStorage.getItem('pageView')){
+//     // перетворюємо на масив і дописуємо
+//     pageView = JSON.parse(localStorage.getItem('pageView'))
+// }
 //
 //
+// value.innerText = `Кількість перезавантажень ${number}`;
+// // Додаю поточну дату відвідування сторінки
+// pageView.push(new Date());
+//
+// // записую значення в масив
+// localStorage.setItem('pageView', JSON.stringify(pageView))
+// let number = +localStorage.getItem('number')
+// number += 10;
+// localStorage.setItem('number', number)
+//
+// // якщо такі сесії вже були - і є записи в localStorage
+// if (localStorage.getItem('pageView')){
+//     // перетворюємо на масив і дописуємо
+//     pageView = JSON.parse(localStorage.getItem('pageView'))
+// }
+
+// Це не мій код
+// window.onload = function(){
+//     let numberBlock  = document.getElementById('numberBlock');
+//     let datePage = Date.now();
+//
+//     let currentNumber = parseInt(localStorage.getItem('reloadPage')) || 100;
+//     let currentDate =  parseInt(localStorage.getItem('currentDate')) || 0;
+//
+//     if(datePage - currentDate >= 10000){
+//         currentNumber += 10;
+//         localStorage.setItem('reloadPage', currentNumber);
+//         localStorage.setItem('currentDate', datePage);
+//     }
+//     numberBlock.textContent = currentNumber;
 //
 //
 // #NKB0tgWIK1G
@@ -183,3 +221,42 @@
 //     При натисканні next виводяться наступні 10 об’єктів
 //
 // При натисканні prev виводяться попередні 10 об’єктів
+
+// let arrayView = document.getElementById('arrayView')
+// let prev = document.getElementById('prev');
+// let next = document.getElementById('next');
+//
+// let array = []
+// for (let i = 0; i < 100; i++) {
+//     array.push({id: i + 1, name: 'misha' + (i + 1)})
+// }
+//
+// console.log(array)
+//
+// let counter = 0;
+// let limit = 10;
+// next.addEventListener('click', function () {
+//     arrayView.innerText = '';
+//     for (let i = counter; i < limit; i++) {
+//         const p = document.createElement('p')
+//         p.innerText = array[i].name;
+//         arrayView.appendChild(p);
+//     }
+//     counter += 10;
+//     limit += 10;
+// });
+//
+// prev.addEventListener('click', function () {
+//     arrayView.innerText = '';
+//     limit -= 10;
+//     if (counter >= 10){
+//         counter -= 10;
+//     } else {
+//         counter = 0;
+//     }
+//     for (let i = counter; i < limit; i++) {
+//         const p = document.createElement('p')
+//         p.innerText = array[i].name;
+//         arrayView.appendChild(p);
+//     }
+// });
