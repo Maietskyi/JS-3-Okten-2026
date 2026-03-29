@@ -5,54 +5,36 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>JS project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!--1 завдання-->
-<!--<div>-->
-<!--    <p id="text">При натисканні я зникну</p>-->
-<!--    <button id="button">Сховати</button>-->
-<!--</div>-->
-<!--2 завдання-->
-<!--<form action="" id="myForm">-->
-<!--    <input type="number" id="age" placeholder="Введіть ваш вік">-->
-<!--    <button id="button">Перевірити</button>-->
-<!--    <p id="text"></p>-->
-<!--</form>-->
-<!--3 завдання-->
-<!--<form action="" name="myForm">-->
-<!--    <input type="text" id="name" placeholder="Name">-->
-<!--    <input type="text" id="surname" placeholder="Surname">-->
-<!--    <input type="number" id="age" placeholder="Age">-->
-<!--    <button id="send">Send</button>-->
-<!--</form>-->
-<!--<div id="text"></div>-->
-<!--4 завдання-->
-<!--<div id="text"></div>-->
-<!--5 завдання-->
-<!--<a href="./sessionsListPage.html">Session Page</a>-->
-<!--6 завдання-->
-<!--    <input type="number" id="kg" placeholder="Введіть вагу в кілограмах" required>-->
-<!--<div id="text"></div>-->
-<!--8 завдання-->
-<!--<form name="tabel1">-->
-<!--    <input type="number" id="num1">-->
-<!--    <input type="number" id="num2">-->
-<!--    <input type="text" id="text">-->
-<!--    <button id="button">Submit</button>-->
-<!--</form>-->
-<!--9 завдання-->
-<!--<div>-->
-<!--    <h3 id="value"></h3>-->
-<!--</div>-->
-<!--10 завдання-->
-<!--<div id="arrayView"></div>-->
-<!--<div>-->
-<!--    <button id="prev">prev</button>-->
-<!--    <button id="next">next</button>-->
-<!--</div>-->
+<div class="container">
+    <h2>Test</h2>
+    <div class="box-content">
+        <div class="input-container">
+            <div class="input-wrapper">
+                <label for="addPair">Name/Value Pair</label>
+                <input type="text" name="addPair" id="addPair" placeholder="Name=Value">
+            </div>
+            <button id="addButton">Add</button>
+        </div>
+        <p id="errorMessage" class="error-message"></p>
 
+        <div class="list-container">
+            <div class="list-content">
+                <p>Name/Value Pair List</p>
+                <ul id="pairList"></ul>
+            </div>
+            <div class="buttons-container">
+                <button id="sortByName">Sort by Name</button>
+                <button id="sortByValue">Sort by Value</button>
+                <button id="deleteSelected">Delete Selected Items</button>
+                <button id="deleteAll">Delete All Items</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="main.js"></script>
 </body>
 </html>

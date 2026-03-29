@@ -1,262 +1,140 @@
-// JS. ДЗ 10
-// Коди з лекцій та коди з ДЗ
-//
-// https://github.com/OktenSchool/javascript.git
-//
-//     #sH8c4er
-//
-// – Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id=”text”.
-// // let text = document.getElementById("text");
-// // let button = document.getElementById("button");
-// button.addEventListener("click", function (ev) {
-//     ev.preventDefault();
-//     // text.remove();
-//     text.style.display = 'none'
-// })
-//
-// #j693ca8
-//
-// – створити інпут, який приймає вік людини, та кнопку, яка підтверджує дію. При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік, чи менше він за 18, та повідомити про це користувача
-//
-// let myForm = document.forms.myForm;
-//
-// let text = document.getElementById('text');
-// myForm.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//
-//     // let age = +document.getElementById('age').value;
-//     age = +myForm.age.value;
-//     if (age < 18) {
-//         text.innerText = `Вибачте, контент не доступний`
-//     } else if (age >= 18) {
-//         text.innerText = `Приємного перегляду`
-//     }
-// })
-//
-// #ymAmN2xJ
-//
-// Створити форму з трьома полями для name, surname, age та кнопкою. При натисканні на кнопку зчитати дані з полів, та вивести об’єкт в документ. Іншими словами : заповнили форму, натиснули кнопку, під формою з’явився блок з вашим об’єктом
-//
-// let myForm = document.forms.myForm;
-//
-// myForm.addEventListener('submit', (e) => {
-//     e.preventDefault()
-//
-//     let name = document.getElementById(`name`).value;
-//     let surname = document.getElementById(`surname`).value;
-//     let age = document.getElementById(`age`).value;
-//     let send = document.getElementById(`send`)
-//     let text = document.getElementById(`text`)
-//
-//     let user = {name, surname, age}
-//     text.innerText = `Name: ${user.name}, Surname: ${user.surname}, Age: ${user.age}`;
-//     // text.innerText = `Name: ${name.value}, Surname: ${surname.value}, Age: ${age.value}`;
-// })
-//
-// #2VaLt4vDczH
-//
-// є сторінка, на якій є блок, в кому знаходиться цифра. Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
-//
-// let num = +localStorage.getItem('number');
-// num += 1;
-// localStorage.setItem('number', num);
-//
-// document.getElementById('text').innerText = num;
-//
-// #LhSfdhM3
-//
-// Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховище, в масив sessionsList зберігається інформація про дату та час відвідування сторінки. Є  сторінка sessionsListPage.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а малювати в DOM
-//
-// let sessionsList = JSON.parse(localStorage.getItem('sessionsList')) || [];
-// sessionsList.push(new Date());
-// console.log(sessionStorage);
-// localStorage.setItem('sessionsList', JSON.stringify(sessionsList));
-//
-// #Jg0gPO00
-//
-// створити конвертор ваги з кг в фунти. дані заповнюються через інпут. При введенні даних обрахунок стається миттєво, без натискань додаткових кнопок
-//
-// let kg = document.getElementById("kg");
-// let text = document.getElementById("text");
-// kg.addEventListener('input', (e) => {
-//     e.preventDefault();
-//     text.textContent = +kg.value * 2.2;
-// })
+let pairsArray = []; // Array for storing "Name=Value" pairs
 
-// let kg = document.getElementById("kg");
-// let text = document.getElementById("text");
-// kg.oninput = function (en) {
-//     en.preventDefault();
-//     text.innerText = +this.value * 2.2;
-// }
+// Load data from LocalStorage when the page loads
+window.onload = function () {
+    try {
+        let storedData = localStorage.getItem("pairsArray");
+        if (storedData) {
+            pairsArray = JSON.parse(storedData);
+            renderPairs();
+        }
+    } catch (e) {
+        console.error("Error accessing localStorage:", e);
+    }
+}
 
-//
-// #RbQGnH5DuC
-//
-// В localStorage зберігаються масиви. Вам потрібно зробити функцію, які дістає потрібний вам масив з localStorage та додає в нього об’єкт
-//
-// сигнатура функції –
-//
-// addToLocalStorage(arrayName,objToAdd)
-//
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
-// ];
-// localStorage.setItem('arrayKey', JSON.stringify(coursesAndDurationArray))
-//
-// function addToLocalStorage(arrayName, objToAdd) {
-//     let jsonls = JSON.parse(localStorage.getItem(arrayName));
-//     if (!jsonls) {
-//         new Error(`Немає такого об'єкта в локал сторадж`)
-//     }
-//     if (typeof (jsonls) === 'object') {
-//         jsonls.push(objToAdd)
-//     }
-//     localStorage.setItem(arrayName, JSON.stringify(jsonls));
-// }
-//
-// addToLocalStorage('arrayKey', {})
-//
-//     #kUSgFqWY
-//
-// Створити 3 інпута та кнопку. Один визначає кількість рядків, другий – кількість ячеєк, третій – вміст ячеєк.
-//
-//     При натисканні кнопки вся ця інформація зчитується і формується табличка з відповідним вмістом.
-//
-// let tabelForm = document.forms['tabel1'];
-// let table = document.createElement("table");
+// Function to show or hide error messages
+function showError(message) {
+    let errorField = document.getElementById("errorMessage");
+    if (message) {
+        errorField.style.display = 'block';
+        errorField.textContent = message;
+    } else {
+        errorField.style.display = 'none';
+        errorField.textContent = '';
+    }
+}
 
-// let tabelForm = document.forms['tabel1'];
-//
-// tabelForm.addEventListener('submit', function (e) {
-//     e.preventDefault();
-//
-//     let oldTable = document.querySelector('table');
-//     if (oldTable) oldTable.remove();
-//
-//     let num1 = +document.getElementById('num1').value;
-//     let num2 = +document.getElementById('num2').value;
-//     let text = document.getElementById('text').value;
-//
-//     let table = document.createElement("table");
-//
-//     for (let i = 0; i < num1; i++) {
-//         let tr = document.createElement('tr');
-//
-//         for (let y = 0; y < num2; y++) {
-//             let td = document.createElement('td');
-//             td.innerText = text;
-//             tr.append(td);
-//         }
-//
-//         table.append(tr);
-//     }
-//
-//     document.body.append(table);
-// });
-//
-//     #bq1zkx7WP
-//
-// *** (подібне було вище, але…будьте уважні в другій частині) створити сторінку з довільним блоком, в середині якого є значення “100грн”
-//
-// при перезавантаженні сторінки до значення додається по 10грн, але !!! зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
-//
-//     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд, нічого не відбувається
-//
-// let value = document.getElementById('value')
-//
-// let pageView = [];
-// // якщо такі сесії вже були - і є записи в localStorage
-// if (localStorage.getItem('pageView')){
-//     // перетворюємо на масив і дописуємо
-//     pageView = JSON.parse(localStorage.getItem('pageView'))
-// }
-//
-//
-// value.innerText = `Кількість перезавантажень ${number}`;
-// // Додаю поточну дату відвідування сторінки
-// pageView.push(new Date());
-//
-// // записую значення в масив
-// localStorage.setItem('pageView', JSON.stringify(pageView))
-// let number = +localStorage.getItem('number')
-// number += 10;
-// localStorage.setItem('number', number)
-//
-// // якщо такі сесії вже були - і є записи в localStorage
-// if (localStorage.getItem('pageView')){
-//     // перетворюємо на масив і дописуємо
-//     pageView = JSON.parse(localStorage.getItem('pageView'))
-// }
+// Event handler for the "addButton" button — adds a new "Name=Value" pair
+document.getElementById("addButton").addEventListener("click", () => {
+    let inputElement = document.getElementById("addPair");
+    let inputValue = inputElement.value.trim();
 
-// Це не мій код
-// window.onload = function(){
-//     let numberBlock  = document.getElementById('numberBlock');
-//     let datePage = Date.now();
-//
-//     let currentNumber = parseInt(localStorage.getItem('reloadPage')) || 100;
-//     let currentDate =  parseInt(localStorage.getItem('currentDate')) || 0;
-//
-//     if(datePage - currentDate >= 10000){
-//         currentNumber += 10;
-//         localStorage.setItem('reloadPage', currentNumber);
-//         localStorage.setItem('currentDate', datePage);
-//     }
-//     numberBlock.textContent = currentNumber;
-//
-//
-// #NKB0tgWIK1G
-//
-// ***PAGINATION
-//
-// зробити масив на 100 об’єктів та дві кнопки prev next
-//
-// при завантаженні сторінки з’являються перші 10 об’єктів.
-//
-//     При натисканні next виводяться наступні 10 об’єктів
-//
-// При натисканні prev виводяться попередні 10 об’єктів
+    // Check if the input field is empty
+    if (!inputValue) {
+        showError("Field cannot be empty. Please enter a Name/Value Pair.");
+        return;
+    }
 
-// let arrayView = document.getElementById('arrayView')
-// let prev = document.getElementById('prev');
-// let next = document.getElementById('next');
-//
-// let array = []
-// for (let i = 0; i < 100; i++) {
-//     array.push({id: i + 1, name: 'misha' + (i + 1)})
-// }
-//
-// console.log(array)
-//
-// let counter = 0;
-// let limit = 10;
-// next.addEventListener('click', function () {
-//     arrayView.innerText = '';
-//     for (let i = counter; i < limit; i++) {
-//         const p = document.createElement('p')
-//         p.innerText = array[i].name;
-//         arrayView.appendChild(p);
-//     }
-//     counter += 10;
-//     limit += 10;
-// });
-//
-// prev.addEventListener('click', function () {
-//     arrayView.innerText = '';
-//     limit -= 10;
-//     if (counter >= 10){
-//         counter -= 10;
-//     } else {
-//         counter = 0;
-//     }
-//     for (let i = counter; i < limit; i++) {
-//         const p = document.createElement('p')
-//         p.innerText = array[i].name;
-//         arrayView.appendChild(p);
-//     }
-// });
+    // Check input format using regular expression
+    let validPairRegex = /^\s*([a-zA-Z0-9]+)\s*=\s*([a-zA-Z0-9]+)\s*$/;
+    if (!validPairRegex.test(inputValue)) {
+        showError('Invalid format! Please use "Name=Value" with alphanumeric characters.');
+        return;
+    }
+
+    // Split the input pair into name and value
+    const [pairName, pairValue] = inputValue.split("=").map(str => str.trim());
+
+    // Add the valid Name/Value pair to the array with a unique identifier
+    pairsArray.push({id: new Date().getTime(), name: pairName, value: pairValue, isSelect: false});
+    inputElement.value = "";
+
+    showError("");
+    renderPairs();
+    saveToLocalStorage();
+});
+
+// Function for rendering "Name=Value" pairs on the page
+function renderPairs() {
+    showError("");
+    let pairList = document.getElementById("pairList");
+    pairList.innerHTML = "";
+    for (const item of pairsArray) {
+        const pairLi = document.createElement("li");
+        pairLi.classList.add("pair-item");
+        pairLi.id = item.id;
+        pairLi.classList.add(item.isSelect ? 'active' : 'note');
+        pairLi.innerText = `${item.name}=${item.value}`;
+        pairList.appendChild(pairLi);
+    }
+}
+
+// Event handler for clicking on list items
+document.addEventListener('click', function(e) {
+    // Handle click on pair items to toggle selection
+    if(e.target.closest('.pair-item')) {
+        toggleIsSelect(e.target.id)
+    }
+})
+
+// Function to toggle the selection state of a pair
+function toggleIsSelect(id) {
+    const findValue = pairsArray.find(item => String(item.id) === String(id));
+    if(findValue) {
+        findValue.isSelect = !findValue.isSelect;
+        renderPairs();
+        saveToLocalStorage();
+    }
+}
+
+// Event handler for the sort by name button
+document.getElementById("sortByName").addEventListener("click", () => {
+    pairsArray.sort((a, b) => {
+        if (a.name > b.name) return 1;
+        if (a.name < b.name) return -1;
+        return 0;
+    });
+    renderPairs();
+    saveToLocalStorage();
+});
+
+// Event handler for the sort by value button
+document.getElementById("sortByValue").addEventListener("click", () => {
+    pairsArray.sort((a, b) => {
+        if (a.value > b.value) return 1;
+        if (a.value < b.value) return -1;
+        return 0;
+    });
+    renderPairs();
+    saveToLocalStorage();
+});
+
+// Event handler for the delete selected items button
+document.getElementById("deleteSelected").addEventListener("click", () => {
+    let selectedItems = pairsArray.filter(item => item.isSelect);
+    if (selectedItems.length === 0) {
+        showError("No items selected to delete.");
+        return;
+    }
+
+    pairsArray = pairsArray.filter(item => !item.isSelect)
+    saveToLocalStorage();
+    renderPairs();
+});
+
+// Event handler for the delete all items button
+document.getElementById("deleteAll").addEventListener("click", () => {
+    pairsArray = [];
+    saveToLocalStorage();
+    renderPairs();
+});
+
+// Function save array to LocalStorage
+function saveToLocalStorage() {
+    try {
+        localStorage.setItem("pairsArray", JSON.stringify(pairsArray));
+    } catch (e) {
+        console.error("Error saving to localStorage:", e); // Catch potential errors in saving data
+    }
+}
