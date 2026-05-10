@@ -67,9 +67,6 @@ fetch('https://dummyjson.com/carts')
         document.body.append(store);
     });
 
-
-
-
 //
 //     #whXxOBlYS0H
 //
