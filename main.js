@@ -71,9 +71,76 @@
 //
 // – взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти. Інгредієнти повинні бути списком під час відображення.
 
-fetch('https://dummyjson.com/recipes')
-    .then(res => res.json())
-    .then(jsonCarts => {
-        const {recipes} = jsonCarts;
-        console.log(recipes);
-    })
+// fetch('https://dummyjson.com/recipes')
+//     .then(res => res.json())
+//     .then(jsonCarts => {
+//         const {recipes} = jsonCarts;
+//
+//         let container = document.createElement('div')
+//         let recipeText = document.createElement('ol')
+//         for (const recipe of recipes) {
+//             console.log(recipe)
+//
+//
+//             let pizza = document.createElement('li')
+//             pizza.innerText = `
+//                 id: ${recipe.id},
+//                 Name: ${recipe.name},
+//             `;
+//
+//             let img = document.createElement('img');
+//             img.src = recipe.image;
+//
+//             pizza.prepend(img);
+//
+//             if (recipe.ingredients) {
+//
+//                 let h3Ingredients = document.createElement('h3')
+//                 h3Ingredients.innerText = 'Ingredients'
+//                 pizza.append(h3Ingredients)
+//
+//                 for (const ingredient of recipe.ingredients) {
+//
+//                     let ingredientText = document.createElement('p')
+//                     ingredientText.innerText = `${ingredient}`;
+//
+//                     pizza.append(ingredientText)
+//                 }
+//             }
+//
+//             if (recipe.instructions) {
+//
+//                 let h3Instructions = document.createElement('h3')
+//                 h3Instructions.innerText = 'Instructions'
+//                 pizza.append(h3Instructions)
+//
+//                 for (const instruction of recipe.instructions) {
+//
+//                     let instructionsText = document.createElement('p')
+//                     instructionsText.innerText = `${instruction}`;
+//
+//                     pizza.append(instructionsText)
+//                 }
+//             }
+//
+//             let detailText = document.createElement('h4')
+//             detailText.innerText = 'Detail'
+//             pizza.append(detailText)
+//
+//             let detail = document.createElement('p')
+//             detail.innerText = `
+//                 prep Time Minutes: ${recipe.prepTimeMinutes},
+//                 cook Time Minutes: ${recipe.cookTimeMinutes},
+//                 servings: ${recipe.servings},
+//                 difficulty: ${recipe.difficulty},
+//                 cuisine: ${recipe.cuisine},
+//                 calories Per Serving: ${recipe.caloriesPerServing},
+//             `;
+//
+//             pizza.append(detail)
+//
+//             recipeText.append(pizza)
+//         }
+//         container.append(recipeText)
+//         document.body.append(container)
+//     })
